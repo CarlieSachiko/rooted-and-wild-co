@@ -6,4 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Rooted & Wild' });
 });
 
+router.get('/shop/', function(req, res, next) {
+  res.render('shop', { title: 'Rooted & Wild' });
+});
+
 module.exports = router;
