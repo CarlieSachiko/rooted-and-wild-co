@@ -2,58 +2,45 @@
 'use strict';
 
 angular.module('app', ['ui.router', 'ngAnimate', 'ngResource'])
-  .config(configRoutes)
-  .run(runBlock);
+  .config(configRoutes);
 
-runBlock.$inject = ['$rootScope', '$state', 'UserService'];
+configRoutes.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider'];
 
-function runBlock($rootScope, $state, UserService) {
-  $rootScope.$on('$stateChangeStart', function(evt, toState) {
-    if (toState.loginRequired && !UserService.isLoggedIn()) {
-      evt.preventDefault();
-      $state.go('login');
-    }
-  });
-}
+function configRoutes($stateProvider, $urlRouterProvider, $httpProvider) {
 
-configRoutes.$inject = ['$stateProvider', '$urlRouterProvider'];
-
-function configRoutes($stateProvider, $urlRouterProvider) {
+  // $httpProvider.interceptors.push('AuthInterceptor');
 
   $stateProvider
 
-    .state('shop-home', {
-      url: '/home',
-      templateUrl: 'templates/shop/home.html'
+    .state('home', {
+      url: '/',
+      templateUrl: 'templates/home.html',
+      controller: 'MainController as mainCtrl'
+    })
+    .state('about', {
+      url: '/about',
+      templateUrl: 'templates/about.html',
+      controller: 'MainController as mainCtrl'
+    })
+    .state('blog', {
+      url: '/blog',
+      templateUrl: 'templates/blog.html',
+      controller: 'MainController as mainCtrl'
+    })
+    .state('work', {
+      url: '/work',
+      templateUrl: 'templates/work.html',
+      controller: 'MainController as mainCtrl'
+    })
+    .state('contact', {
+      url: '/contact',
+      templateUrl: 'templates/contact.html',
+      controller: 'MainController as mainCtrl'
     })
 
-    .state('login', {
-      url: '/login',
-      templateUrl: 'templates/shop/users/login.html',
-      controller: 'UserController as userCtrl'
-    })
 
-    .state('signup', {
-      url: '/signup',
-      templateUrl: 'templates/shop/users/signup.html',
-      controller: 'UserController as userCtrl'
-    })
 
-    .state('favorites', {
-      url: '/favorites',
-      templateUrl: 'templates/shop/users/favorites.html',
-      controller: 'UserController as userCtrl',
-      loginRequired: true
-    })
-
-    .state('orders', {
-      url: '/order_history',
-      templateUrl: 'templates/shop/users/orders.html',
-      controller: 'UserController as userCtrl',
-      loginRequired: true
-    });
-
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/');
 }
 
 

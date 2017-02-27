@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-// var todoCtrl = require('../controllers/todos');
+var bouquetCtrl = require('../controllers/bouquets');
 var userCtrl = require('../controllers/users');
 
 // Public routes (no auth required)
@@ -8,6 +8,8 @@ router.post('/users/login', userCtrl.login);
 router.get('/users/logout', userCtrl.logout);
 router.post('/users', userCtrl.create);
 router.get('/users/me', userCtrl.me);
+
+// router.get()
 
 
 // Auth middleware (routes below need authentication)

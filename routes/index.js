@@ -10,4 +10,9 @@ router.get('/shop/', function(req, res, next) {
   res.render('shop', { title: 'Rooted & Wild' });
 });
 
+router.get('/home/', function(req, res, next) {
+  res.render('main', { title: 'Rooted & Wild' });
+});
+
+
 module.exports = router;

@@ -1,0 +1,26 @@
+* {
+  font-family: 'Crimson Text';
+  border-radius: 0 !important;
+}
+
+[ui-view].ng-enter {
+  transition: opacity 0.8s;
+  opacity: 0;
+}
+
+[ui-view].ng-enter-active {
+  opacity: 1;
+}
+
+[ui-view].ng-leave {
+  opacity: 1;
+}
+
+[ui-view].ng-leave-active {
+  opacity: 0;
+}
+
+.submit-btn:hover {
+  background-color: black;
+  color: white;
+}

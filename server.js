@@ -4,13 +4,12 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var session = require('express-session');
-
-var indexRoutes = require('./routes/index');
-var apiRoutes = require('./routes/api');
 
 require('dotenv').config();
 require('./config/database');
+
+var indexRoutes = require('./routes/index');
+var apiRoutes = require('./routes/api');
 
 var app = express();
 
@@ -24,15 +23,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(session({
-  secret: 'WDIRocks!',
-  resave: false,
-  saveUninitialized: true
-}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // our custom middleware to add user to req
-app.use( require('./config/auth') );
+app.use( require('./config/auth').verifyToken );
 
 app.use('/', indexRoutes);
 app.use('/api', apiRoutes);

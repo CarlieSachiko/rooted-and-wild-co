@@ -1,11 +1,9 @@
-angular.module('app')
+angular.module('shopApp')
   .factory('UserService', userService);
 
-userService.$inject = ['$http'];
+userService.$inject = ['$http', 'TokenService'];
 
-function userService($http) {
-
-  var user = null;
+function userService($http, TokenService) {
 
   var service = {
     login,
@@ -15,42 +13,30 @@ function userService($http) {
     isLoggedIn
   };
 
-  // get logged in user if already exists in server session
-  $http.get('/api/users/me').then(function(res) {
-    user = res.data;
-  });
-
   function login(credentials) {
-    return $http.post('/api/users/login', credentials).then(function(res) {
-      user = res.data;
-    }, function(res) {
-      user = null;
-    });
+    return $http.post('/api/users/login', credentials);
   }
 
   function logout() {
-    return $http.get('/api/users/logout').then(function(res) {
-      user = null;
-    }, function(res) {
-      user = null;
-    });
+    TokenService.removeToken();
   }
 
   function signup(userData) {
-    return $http.post('/api/users', userData).then(function(res) {
-      user = res.data;
-    }, function(res) {
-      user = null;
-    });
+    return $http.post('/api/users', userData);
   }
 
   function getUser() {
-    return user;
+    return getUserFromToken();
   }
 
   function isLoggedIn() {
-    return !!user;
+    return !!getUserFromToken();
   }
 
   return service;
+
+  function getUserFromToken() {
+    var token = TokenService.getToken();
+    return token ? JSON.parse(atob(token.split('.')[1])).user : null;
+  }
 }

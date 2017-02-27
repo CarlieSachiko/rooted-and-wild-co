@@ -1,4 +1,4 @@
-angular.module('app')
+angular.module('shopApp')
 .controller('UserController', UserController);
 
 UserController.$inject = ['$state', 'UserService'];

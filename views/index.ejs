@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html>
   <head>
     <title><%= title %></title>
     <!-- jQuery -->
@@ -9,6 +9,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- My CSS -->
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
@@ -16,10 +17,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-resource.min.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-
-    <a href="/shop">SHOP</a>
+    <div ui-view></div>
+    <!-- HEADER  -->
+    <header id="header" class="parallax header img-responsive">
+      <!-- <img class="center-block img-responsive main-logo" src="images/R&W-LogoLarge2Black.png" alt=""> -->
+      <nav class="text-center navbar navbar-default">
+        <a href="/home" class="btn btn-default index-btn">Enter</a>
+        <a href="/shop" class="btn btn-default index-btn">Shop</a>
+      </nav>
+    </header>
 
 
 

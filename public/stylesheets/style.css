@@ -1,8 +1,85 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+  font-family: 'Crimson Text';
+  border-radius: 0 !important;
 }
 
-a {
-  color: #00B7FF;
+/*// MAIN Page*/
+
+#header {
+  height: 100vh;
+  background-image: url("../images/IMG_0007.png") ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
+
+.index-btn {
+  background-color: transparent;
+  color: white;
+  margin: 10px;
+  font-size: 17px;
+}
+
+.index-btn:hover {
+  background-color: white;
+  color: black;
+  border-color: white;
+}
+
+.navbar {
+  background-color: transparent;
+  border: none;
+  margin-bottom: 20px;
+}
+
+#nav-logo-img, #logo-img {
+  /*margin: auto !important;*/
+  max-height: 200px;
+  margin-top: -10px;
+}
+
+#logo-img {
+  margin-top: -30px;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.nav-link {
+  margin-top: 75px;
+}
+
+a.navbar-toggle {
+  border: none !important;
+  float: none;
+  padding: 30px 10px;
+  margin: 8px 15px 8px 0;
+  color: #777;
+}
+
+a.navbar-toggle:hover {
+  background-color: transparent !important;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media screen and (max-width:768px) {
+  .navbar-toggle {
+    display: inline-block;
+    padding: 10px !important;
+  }
+  nav.navbar {
+    border-bottom: #E1E1E1 1px solid;
+  }
+  .nav-link {
+    margin-top: 0;
+  }
+}
+

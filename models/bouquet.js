@@ -6,7 +6,7 @@ var bouquetSchema = new mongoose.Schema({
   tags: [String],
   price: Number,
   image: String
-})
+});
 
 
 module.exports = mongoose.model('Bouquet', bouquetSchema);
