@@ -6,7 +6,7 @@
     </div>
     <div class="col-xs-3">
       <h1>{{detailCtrl.bouquet.name}}</h1>
-      <p>{{detailCtrl.bouquet.price | currency:'$':0}}</p>
+      <p>{{detailCtrl.bouquet.price | currency:'$'}}</p>
       <p>{{detailCtrl.bouquet.details}}</p>
       <form class="form-horizontal">
         <div class="form-group">
@@ -16,7 +16,7 @@
           </div>
         </div>
       </form>
-      <button ng-controller="CartController as cartCtrl" ng-click="cartCtrl.addToCart(detailCtrl.bouquet._id)">Add to Cart</button>
+      <button ng-click="detailCtrl.addItem(detailCtrl.bouquet)">Add to Cart</button>
     </div>
 
   </div>

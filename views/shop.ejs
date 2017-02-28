@@ -37,7 +37,7 @@
                 <li><a ng-click="shopNavCtrl.logout()">Log Out</a></li>
               </ul>
             </li>
-            <li><a ui-sref="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a></li>
+            <li><a ui-sref="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart ({{shopNavCtrl.getCart().length}})</a></li>
           </ul>
         </div>
       </nav>
@@ -54,6 +54,7 @@
     <script src="javascripts/controllers/detail-controller.js"></script>
     <script src="javascripts/controllers/cart-controller.js"></script>
     <script src="javascripts/services/bouquet-service.js"></script>
+    <script src="javascripts/services/cart-service.js"></script>
     <script src="javascripts/services/user-service.js"></script>
     <script src="javascripts/services/auth-interceptor.js"></script>
     <script src="javascripts/services/token-service.js"></script>

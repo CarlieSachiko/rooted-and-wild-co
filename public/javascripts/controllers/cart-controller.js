@@ -1,13 +1,16 @@
 angular.module('shopApp')
   .controller('CartController', CartController);
 
-CartController.$inject = ['$http', 'BouquetService', '$stateParams'];
+CartController.$inject = ['$http', 'BouquetService', '$stateParams', 'CartService'];
 
-function CartController($http, BouquetService, $stateParams) {
+function CartController($http, BouquetService, $stateParams, CartService) {
   var vm = this;
 
-  vm.addToCart = function(id) {
-    console.log(id);
-  }
+  vm.cart = CartService.getCart();
+
+  vm.changeItemQty = function (item, newQty) {
+    CartService.changeItemQty(item, newQty);
+    item.qty = newQty;
+  };
 
 }

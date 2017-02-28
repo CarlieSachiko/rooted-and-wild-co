@@ -40,8 +40,8 @@
         <a ui-sref="show_bouquet({bouqId: bouquet._id})"><img ng-src="{{bouquet.image}}" height="200" alt="..."></a>
         <div class="caption">
           <h3><a ui-sref="show_bouquet({bouqId: bouquet._id})"><span>{{bouquet.name}}</span></a></h3>
-          <p>{{bouquet.price | currency:'$':0}}</p>
-          <p ng-controller="CartController as cartCtrl"><a href="#" class="btn btn-primary" role="button" ng-click="cartCtrl.addToCart(bouquet._id)">Add to Cart</a></p>
+          <p>{{bouquet.price | currency:'$'}}</p>
+          <p><a href="#" class="btn btn-primary" role="button" ng-click="bouqCtrl.addItem(bouquet)">Add to Cart</a></p>
         </div>
       </div>
 

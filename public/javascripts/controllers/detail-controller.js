@@ -1,9 +1,9 @@
 angular.module('shopApp')
   .controller('DetailController', DetailController);
 
-DetailController.$inject = ['$http', 'BouquetService', '$stateParams'];
+DetailController.$inject = ['$http', 'BouquetService', '$stateParams', 'CartService'];
 
-function DetailController($http, BouquetService, $stateParams) {
+function DetailController($http, BouquetService, $stateParams, CartService) {
   var vm = this;
 
   if ($stateParams.bouqId) {
@@ -11,4 +11,6 @@ function DetailController($http, BouquetService, $stateParams) {
       vm.bouquet = bouquet;
     });
   }
+
+  vm.addItem = CartService.addItem;
 }

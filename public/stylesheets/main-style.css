@@ -3,6 +3,23 @@
   border-radius: 0 !important;
 }
 
+[ui-view].ng-enter {
+  transition: opacity 0.8s;
+  opacity: 0;
+}
+
+[ui-view].ng-enter-active {
+  opacity: 1;
+}
+
+[ui-view].ng-leave {
+  opacity: 1;
+}
+
+[ui-view].ng-leave-active {
+  opacity: 0;
+}
+
 /*NAV*/
 
 #nav-logo-img, #logo-img {
@@ -15,10 +32,16 @@
   margin-top: -30px;
 }
 
+.navbar-default {
+  background-color: white;
+
+}
+
 .navbar .navbar-nav {
   display: inline-block;
   float: none;
   vertical-align: top;
+  background-color: white;
 }
 
 .navbar .navbar-collapse {
@@ -56,18 +79,91 @@ a.navbar-toggle:hover {
   }
 }
 
+/*ABOUT STATE*/
+.about-img {
+  max-height: 400px;
+}
+
+#about {
+  height: 66vh;
+}
+
+@media screen and (max-width:768px) {
+  #about {
+    height: 80vh;
+  }
+}
+
 /*CONTACT STATE*/
 
-div.contact {
-  width: 60%;
+#contact {
+  margin-top: -50px;
+  height: 80vh;
+}
+
+div.contact-text {
+  width: 75%;
+  margin: auto;
+}
+
+div.contact-form {
+  width: 80%;
   margin: auto;
   padding-top: 15px;
 }
 
-div.contact-form {
-  width: 70%;
-  margin: auto;
-  padding-top: 15px;
+/*WORK STATE*/
+#work {
+  margin-bottom: 20px;
+  margin-top: -20px;
+}
+
+.slideshow-img {
+  max-height: 500px;
+}
+
+@keyframes slidy {
+  0%  { left: 0%; }
+  20% { left: 0%; }
+  25% { left: -100%; }
+  45% { left: -100%; }
+  50% { left: -200%; }
+  70% { left: -200%; }
+  75% { left: -300%; }
+  95% { left: -300%; }
+  100% { left: -400%; }
+}
+
+body {
+  margin: 0;
+}
+
+div#slider {
+/*  width: 80%;
+  max-width: 1000px;*/
+  overflow: hidden;
+}
+
+/*div#slider figure img { float: left; }*/
+div#slider figure img {
+  /*width: 20%;*/
+  height: auto;
+  float: left;
+}
+
+div#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  left: 0;
+  text-align: left;
+  animation: 30s slidy infinite;
+}
+
+@media screen and (max-width:768px) {
+  /*remove slidy stuff*/
 }
 
 /*FOOTER*/

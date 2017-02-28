@@ -1,9 +1,9 @@
 angular.module('shopApp')
 .controller('ShopNavController', ShopNavController);
 
-ShopNavController.$inject = ['$state', 'UserService'];
+ShopNavController.$inject = ['$state', 'UserService', 'CartService'];
 
-function ShopNavController($state, UserService) {
+function ShopNavController($state, UserService, CartService) {
   var vm = this;
 
   vm.logout = function() {
@@ -13,5 +13,6 @@ function ShopNavController($state, UserService) {
 
   vm.getUser = UserService.getUser;
   vm.isLoggedIn = UserService.isLoggedIn;
+  vm.getCart = CartService.getCart;
 
 }

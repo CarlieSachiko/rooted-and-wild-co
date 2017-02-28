@@ -54,11 +54,11 @@ function configRoutes($stateProvider, $urlRouterProvider, $httpProvider) {
       controller: 'CartController as cartCtrl'
     })
 
-    .state('favorites', {
-      url: '/favorites',
-      templateUrl: 'templates/shop/favorites.html',
-      controller: 'UserController as userCtrl',
-      loginRequired: true
+    .state('checkout', {
+      url: '/checkout',
+      templateUrl: 'templates/shop/checkout.html',
+      controller: 'CheckoutController as checkoutCtrl',
+      // loginRequired: true
     })
 
     .state('orders', {
