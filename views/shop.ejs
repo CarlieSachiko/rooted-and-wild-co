@@ -7,6 +7,8 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- FONT AWESOME -->
+    <script src="https://use.fontawesome.com/1d5b93560c.js"></script>
     <!-- My CSS -->
     <link rel='stylesheet' href='/stylesheets/shop-style.css' />
     <!-- Angular -->
@@ -21,7 +23,7 @@
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a ui-sref="shop-home" class="navbar-brand"><img src="images/R&W-LogoLarge2.jpg.jpeg" alt="R&W logo" height="150" id="shop-logo-img"></a>
+            <a href="/home#!" class="navbar-brand"><img src="images/R&W-LogoLarge2.jpg.jpeg" alt="R&W logo" height="150" id="shop-logo-img"></a>
           </div>
           <ul class="nav navbar-nav pull-right">
             <li ng-hide="shopNavCtrl.isLoggedIn()"><span><a ui-sref="login">Log In</a></span> or <span><a ui-sref="signup">Sign Up</a></span></li>
@@ -35,7 +37,7 @@
                 <li><a ng-click="shopNavCtrl.logout()">Log Out</a></li>
               </ul>
             </li>
-            <li><a ui-sref="cart">Cart</a></li>
+            <li><a ui-sref="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a></li>
           </ul>
         </div>
       </nav>
@@ -48,6 +50,9 @@
     <script src="javascripts/shop-app.js"></script>
     <script src="javascripts/controllers/shop-nav-controller.js"></script>
     <script src="javascripts/controllers/user-controller.js"></script>
+    <script src="javascripts/controllers/bouquet-controller.js"></script>
+    <script src="javascripts/controllers/detail-controller.js"></script>
+    <script src="javascripts/controllers/cart-controller.js"></script>
     <script src="javascripts/services/bouquet-service.js"></script>
     <script src="javascripts/services/user-service.js"></script>
     <script src="javascripts/services/auth-interceptor.js"></script>

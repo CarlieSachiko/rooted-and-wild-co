@@ -3,9 +3,11 @@ var Schema = mongoose.Schema;
 
 var bouquetSchema = new mongoose.Schema({
   name: String,
-  tags: [String],
+  flower_used: [String],
+  occasion: [String],
   price: Number,
-  image: String
+  image: String,
+  details: String
 });
 
 

@@ -1,0 +1,85 @@
+* {
+  font-family: 'Crimson Text';
+  border-radius: 0 !important;
+}
+
+/*NAV*/
+
+#nav-logo-img, #logo-img {
+  /*margin: auto !important;*/
+  max-height: 180px;
+  margin-top: -10px;
+}
+
+#logo-img {
+  margin-top: -30px;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.nav-link {
+  margin-top: 75px;
+}
+
+a.navbar-toggle {
+  border: none !important;
+  float: none;
+  padding: 30px 10px;
+  margin: 8px 15px 8px 0;
+  color: #777;
+}
+
+a.navbar-toggle:hover {
+  background-color: transparent !important;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media screen and (max-width:768px) {
+  .navbar-toggle {
+    display: inline-block;
+    padding: 10px !important;
+  }
+  nav.navbar {
+    border-bottom: #E1E1E1 1px solid;
+  }
+  .nav-link {
+    margin-top: 0;
+  }
+}
+
+/*CONTACT STATE*/
+
+div.contact {
+  width: 60%;
+  margin: auto;
+  padding-top: 15px;
+}
+
+div.contact-form {
+  width: 70%;
+  margin: auto;
+  padding-top: 15px;
+}
+
+/*FOOTER*/
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#pinterest, #ig, #fb {
+  max-width: 30px;
+  padding: 5px 5px;
+  bottom: 0;
+}

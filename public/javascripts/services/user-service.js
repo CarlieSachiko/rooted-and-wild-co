@@ -33,10 +33,10 @@ function userService($http, TokenService) {
     return !!getUserFromToken();
   }
 
-  return service;
-
   function getUserFromToken() {
     var token = TokenService.getToken();
     return token ? JSON.parse(atob(token.split('.')[1])).user : null;
   }
+
+  return service;
 }

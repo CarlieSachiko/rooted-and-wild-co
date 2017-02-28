@@ -26,7 +26,14 @@ function configRoutes($stateProvider, $urlRouterProvider, $httpProvider) {
 
     .state('shop-home', {
       url: '/',
-      templateUrl: 'templates/shop/home.html'
+      templateUrl: 'templates/shop/home.html',
+      controller: 'BouquetController as bouqCtrl'
+    })
+
+    .state('show_bouquet', {
+      url: '/details/:bouqId',
+      templateUrl: 'templates/shop/show_bouquet.html',
+      controller: 'DetailController as detailCtrl'
     })
 
     .state('login', {
@@ -44,7 +51,7 @@ function configRoutes($stateProvider, $urlRouterProvider, $httpProvider) {
     .state('cart', {
       url: '/cart',
       templateUrl: 'templates/shop/cart.html',
-      controller: 'UserController as userCtrl'
+      controller: 'CartController as cartCtrl'
     })
 
     .state('favorites', {

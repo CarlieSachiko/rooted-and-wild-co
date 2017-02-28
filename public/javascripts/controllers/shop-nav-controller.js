@@ -1,7 +1,7 @@
 angular.module('shopApp')
 .controller('ShopNavController', ShopNavController);
 
-ShopController.$inject = ['$state', 'UserService'];
+ShopNavController.$inject = ['$state', 'UserService'];
 
 function ShopNavController($state, UserService) {
   var vm = this;

@@ -7,9 +7,7 @@ module.exports = {
   create,
   login,
   logout,
-  me,
-  addFavorite,
-  deleteFavorite
+  me
 };
 
 function create(req, res, next) {
@@ -42,13 +40,5 @@ function logout(req, res, next) {
 // Won't be needed with JWT auth
 function me(req, res, next) {
   res.json(req.user);
-}
-
-function addFavorite(req, res, next) {
-  console.log('Add to Favorites')
-}
-
-function deleteFavorite(req, res, next) {
-  console.log('delete from favorites')
 }
 

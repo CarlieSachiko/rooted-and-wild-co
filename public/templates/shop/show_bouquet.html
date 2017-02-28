@@ -1,0 +1,23 @@
+<div class="container bouquet-container">
+  <div class="row container">
+    <p><a ui-sref="shop-home">Back to results</a></p>
+    <div class="col-xs-4">
+      <img src="{{detailCtrl.bouquet.image}}" alt="" height="400">
+    </div>
+    <div class="col-xs-3">
+      <h1>{{detailCtrl.bouquet.name}}</h1>
+      <p>{{detailCtrl.bouquet.price | currency:'$':0}}</p>
+      <p>{{detailCtrl.bouquet.details}}</p>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="inputEmail3" class="col-xs-3 control-label">Quantity:</label>
+          <div class="col-xs-3">
+            <input type="text" class="form-control" ng-model="detailCtrl.quantity" placeholder="0">
+          </div>
+        </div>
+      </form>
+      <button ng-controller="CartController as cartCtrl" ng-click="cartCtrl.addToCart(detailCtrl.bouquet._id)">Add to Cart</button>
+    </div>
+
+  </div>
+</div>

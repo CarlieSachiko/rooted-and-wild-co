@@ -8,8 +8,7 @@ var userSchema = new mongoose.Schema({
   name: String,
   email: {type: String, lowercase: true, unique: true},
   password: String,
-  favorites: [{type: Schema.Types.ObjectId, ref:"Bouquet"}],
-  basket: [{type: Schema.Types.ObjectId, ref:"Bouquet"}],
+  cart: [{type: Schema.Types.ObjectId, ref:"Bouquet"}],
   orders: [{type: Schema.Types.ObjectId, ref:"Order"}]
 })
 
