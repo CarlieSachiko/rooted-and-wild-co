@@ -1,4 +1,4 @@
-angular.module('shopApp')
+angular.module('app')
   .factory('AuthInterceptor', AuthInterceptor);
 
 AuthInterceptor.$inject = ['TokenService'];

@@ -1,4 +1,4 @@
-angular.module('shopApp')
+angular.module('app')
 .controller('ShopNavController', ShopNavController);
 
 ShopNavController.$inject = ['$state', 'UserService', 'CartService'];
@@ -8,7 +8,7 @@ function ShopNavController($state, UserService, CartService) {
 
   vm.logout = function() {
     UserService.logout();
-    $state.go('shop-home');
+    $state.go('shop');
   };
 
   vm.getUser = UserService.getUser;

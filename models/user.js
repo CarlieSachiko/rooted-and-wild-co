@@ -8,7 +8,6 @@ var userSchema = new mongoose.Schema({
   name: String,
   email: {type: String, lowercase: true, unique: true},
   password: String,
-  cart: [{type: Schema.Types.ObjectId, ref:"Bouquet"}],
   orders: [{type: Schema.Types.ObjectId, ref:"Order"}]
 })
 

@@ -1,4 +1,4 @@
-angular.module('shopApp')
+angular.module('app')
   .factory('UserService', userService);
 
 userService.$inject = ['$http', 'TokenService'];
@@ -10,7 +10,9 @@ function userService($http, TokenService) {
     logout,
     signup,
     getUser,
-    isLoggedIn
+    isLoggedIn,
+    getOrders,
+    addOrder
   };
 
   function login(credentials) {
@@ -36,6 +38,22 @@ function userService($http, TokenService) {
   function getUserFromToken() {
     var token = TokenService.getToken();
     return token ? JSON.parse(atob(token.split('.')[1])).user : null;
+  }
+
+  function addOrder(user, orderId, callback) {
+    $http({
+      url: '/api/users/' + user._id,
+      method: 'PUT',
+      data: {orderId: orderId}
+    }).then(function(res) {
+      callback(res)
+    }).catch(function(err) {
+      callback(err)
+    })
+  }
+
+  function getOrders(id) {
+    return $http.get('/api/users/' + id + '/orders')
   }
 
   return service;

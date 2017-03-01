@@ -1,4 +1,4 @@
-angular.module('shopApp')
+angular.module('app')
   .factory('TokenService', TokenService);
 
 TokenService.$inject = [];

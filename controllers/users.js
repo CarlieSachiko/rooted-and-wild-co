@@ -7,6 +7,8 @@ module.exports = {
   create,
   login,
   logout,
+  getOrders,
+  addOrder,
   me
 };
 
@@ -36,9 +38,26 @@ function logout(req, res, next) {
   res.status(200).json({});
 }
 
-// Called by client to get logged in user doc
-// Won't be needed with JWT auth
 function me(req, res, next) {
   res.json(req.user);
 }
+
+function getOrders(req, res, next) {
+  User.findById(req.params.id).populate('orders').exec(function(err, user) {
+    res.json(user);
+    console.log(user);
+  }).catch(err => res.status(400).json(err));
+}
+
+function addOrder(req, res, next) {
+  User.findById(req.params.id, function(err, user) {
+    user.orders.push(req.body.orderId);
+    user.save(function(err){
+      if(err) {
+        console.log(err);
+      }
+    });
+  });
+}
+
 

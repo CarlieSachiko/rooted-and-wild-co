@@ -1,0 +1,13 @@
+<h1>Your Order History</h1>
+
+<div ng-repeat="order in orderCtrl.orders">
+  {{order}}
+
+  <p>Order Id: {{order._id}}</p>
+  <p>Items ordered: </p>
+  <p ng-repeat="item in order.items">
+    {{item.name}}
+    {{item.qty}}
+  </p>
+
+</div>

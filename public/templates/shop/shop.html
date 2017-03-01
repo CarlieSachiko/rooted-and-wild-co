@@ -1,0 +1,24 @@
+<!-- <div class="navbar-fixed"> -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="/home#!" class="navbar-brand"><img src="images/R&W-LogoLarge2.jpg.jpeg" alt="R&W logo" height="150" id="shop-logo-img"></a>
+    </div>
+    <ul class="nav navbar-nav pull-right">
+      <li ng-hide="shopNavCtrl.isLoggedIn()"><span><a ui-sref="shop.login">Log In</a></span> or <span><a ui-sref="shop.signup">Sign Up</a></span></li>
+      <li ng-show="shopNavCtrl.isLoggedIn()" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a ui-sref="shop.order-history">Order history</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a ng-click="shopNavCtrl.logout()">Log Out</a></li>
+        </ul>
+      </li>
+      <li><a ui-sref="shop.cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart ({{shopNavCtrl.getCart().length}})</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- </div> -->
+
+<br><br><br><br><br><br><br><br>
+<div ui-view class="container"></div>

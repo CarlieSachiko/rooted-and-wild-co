@@ -1,4 +1,4 @@
-angular.module('shopApp')
+angular.module('app')
   .factory('BouquetService', bouquetService);
 
 bouquetService.$inject = ['$resource'];

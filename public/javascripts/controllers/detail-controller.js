@@ -1,4 +1,4 @@
-angular.module('shopApp')
+angular.module('app')
   .controller('DetailController', DetailController);
 
 DetailController.$inject = ['$http', 'BouquetService', '$stateParams', 'CartService'];
@@ -12,5 +12,5 @@ function DetailController($http, BouquetService, $stateParams, CartService) {
     });
   }
 
-  vm.addItem = CartService.addItem;
+  vm.addItemFromShow = CartService.addItemFromShow;
 }

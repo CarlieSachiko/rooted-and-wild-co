@@ -1,1 +1,57 @@
-<h1>Checkout</h1>
+<h1>Review Your Order:</h1>
+  <p ng-hide="checkoutCtrl.isLoggedIn()"><a ui-sref="login">Login</a> or proceed as guest</p>
+  <p><a ui-sref="cart">Edit Cart</a></p>
+  <hr>
+  <div ng-repeat="item in checkoutCtrl.cart">
+    <img ng-src="{{item.image}}" height="200" alt="">
+    <p>{{item.name}} </p>
+    <p>{{item.price*item.qty | currency:'$'}}</p>
+    <p>Quantity: {{item.qty}}</p>
+  </div>
+  <hr>
+  <h5>Sub Total: {{checkoutCtrl.getTotal() | currency:'$'}}</h5>
+  <h5>Tax: {{checkoutCtrl.tax | currency:'$'}}</h5>
+  <h4>Total: {{checkoutCtrl.totalPrice | currency:'$'}}</h4>
+  <hr>
+
+  <h3>Delivery Address</h3>
+
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Address</label>
+      <input type="text" class="form-control" placeholder="Address" ng-model="checkoutCtrl.address" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">City</label>
+      <input type="text" class="form-control" placeholder="City" ng-model="checkoutCtrl.city" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">State</label>
+      <input type="text" class="form-control" placeholder="State" ng-model="checkoutCtrl.state" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Zipcode</label>
+      <input type="text" class="form-control" placeholder="zipcode" ng-model="checkoutCtrl.zipcode" required>
+    </div>
+  <hr>
+    <div class="form-group">
+      <h3>Choose Payment Method:</h3>
+      <select class="form-control" ng-model="checkoutCtrl.payMethod" required>
+        <option>Food</option>
+        <option>Love</option>
+        <option>Cold hard cash</option>
+        <option>Check</option>
+        <option>A good joke</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <h3><button type="submit" class="btn btn-default" ng-click="checkoutCtrl.submitOrder()">Submit Order</button></h3>
+    </div>
+  </form>
+
+
+
+  <hr>
+
+
+</div>

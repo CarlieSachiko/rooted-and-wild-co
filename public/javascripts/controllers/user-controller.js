@@ -1,4 +1,4 @@
-angular.module('shopApp')
+angular.module('app')
 .controller('UserController', UserController);
 
 UserController.$inject = ['$state', 'UserService'];
@@ -15,9 +15,9 @@ function UserController($state, UserService) {
 
   vm.login = function() {
     UserService.login(vm.user).then(function() {
-      $state.go('shop-home');
+      $state.go('shop.index');
     }, function() {
-      $state.go('shop-home');
+      $state.go('login');
     });
     vm.user = {};
   };

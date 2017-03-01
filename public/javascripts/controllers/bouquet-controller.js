@@ -1,4 +1,4 @@
-angular.module('shopApp')
+angular.module('app')
   .controller('BouquetController', BouquetController);
 
 BouquetController.$inject = ['$http', 'BouquetService', 'CartService'];

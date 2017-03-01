@@ -1,1 +1,32 @@
-<h1>Mac's pics</h1>
+<link rel='stylesheet' href='/stylesheets/main-style.css' />
+
+  <nav class="navbar navbar-default text-center">
+      <a type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">MENU</a>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a class="nav-link" ui-sref="home">HOME</a></li>
+          <li><a class="nav-link" ui-sref="home.about">ABOUT</a></li>
+          <li><a id="mid-nav" class="nav-link" ui-sref="home.blog">BLOG</a></li>
+          <li><a ui-sref="home" id="nav-logo-img"><img src="images/R&W-LogoLarge2.jpg.jpeg" alt="R&W logo" id="nav-logo-img"></a></li>
+          <li><a class="nav-link" ui-sref="home.work">WORK</a></li>
+          <li><a class="nav-link" ui-sref="home.contact">CONTACT</a></li>
+          <li><a class="nav-link" ui-sref="shop" target="blank">SHOP</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="logo-div"></div>
+
+    <br>
+    <br>
+
+    <div ui-view class="container"></div>
+
+    <footer class="footer footer-fixed-to-bottom container">
+      <!-- <span class="text-muted">&copy; 2017 Rooted & Wild</span> -->
+      <div class="pull-right">
+        <span><a href="https://www.pinterest.com/rootedandwildco/" target="blank"><img id="pinterest" src="images/pinterest-logo.jpg" alt="Rooted and Wild Pinterest"></a></span>
+        <span><a href="https://www.facebook.com/rootedandwildco/" target="blank"><img id="fb" src="images/fb-logo.jpg" alt="Rooted and Wild Facebook"></a></span>
+        <span><a href="https://instagram.com/rootedandwild" target="blank"><img id="ig" src="images/ig-logo.png" alt="Carlie's IG"></a></span>
+      </div>
+    </footer>

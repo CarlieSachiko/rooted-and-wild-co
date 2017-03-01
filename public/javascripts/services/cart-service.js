@@ -1,4 +1,4 @@
-angular.module('shopApp')
+angular.module('app')
   .factory('CartService', CartService);
 
 CartService.$inject = ['UserService'];
@@ -9,11 +9,18 @@ function CartService(UserService) {
     clearCart,
     addItem,
     getCart,
-    changeItemQty
+    changeItemQty,
+    addItemFromShow
   };
 
   function removeItem(item) {
-    localStorage.removeItem('cart');
+    var cart = getCart();
+    var itemIdx = cart.findIndex(i => i._id === item._id);
+    if(itemIdx != -1) {
+      cart.splice(itemIdx, 1);
+    };
+    updateCart(cart);
+    return cart;
   }
 
   function changeItemQty(item, newQty) {
@@ -27,7 +34,8 @@ function CartService(UserService) {
   }
 
   function clearCart() {
-
+    var key = getCartKey();
+    localStorage.removeItem(key);
   }
 
   function addItem(item) {
@@ -37,6 +45,20 @@ function CartService(UserService) {
       existingItem.qty++;
     } else {
       item.qty = 1;
+      cart.push(item);
+    }
+    updateCart(cart);
+    return cart;
+  }
+
+  function addItemFromShow(item, qty) {
+    console.log(qty);
+    var cart = getCart();
+    var existingItem = cart.find(i => i._id === item._id);
+    if(existingItem) {
+      existingItem.qty += qty;
+    } else {
+      item.qty = qty;
       cart.push(item);
     }
     updateCart(cart);

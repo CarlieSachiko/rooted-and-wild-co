@@ -2,10 +2,14 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var orderSchema = new mongoose.Schema({
-  user: [{type: Schema.Types.ObjectId, ref:"User"}],
+  customer_id: String,
   total_price: Number,
-  shipping_address: String,
-  bouquets: [{type: Schema.Types.ObjectId, ref:"Bouquet"}]
+  delivery_address: String,
+  delivery_city: String,
+  delivery_state: String,
+  delivery_zipcode: String,
+  items: [],
+  payment_method: String
 })
 
 

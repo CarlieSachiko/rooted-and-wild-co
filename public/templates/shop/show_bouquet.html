@@ -12,11 +12,11 @@
         <div class="form-group">
           <label for="inputEmail3" class="col-xs-3 control-label">Quantity:</label>
           <div class="col-xs-3">
-            <input type="text" class="form-control" ng-model="detailCtrl.quantity" placeholder="0">
+            <input type="text" class="form-control" ng-model="detailCtrl.qty" placeholder="0">
           </div>
         </div>
       </form>
-      <button ng-click="detailCtrl.addItem(detailCtrl.bouquet)">Add to Cart</button>
+      <button ng-click="detailCtrl.addItemFromShow(detailCtrl.bouquet, detailCtrl.qty)">Add to Cart</button>
     </div>
 
   </div>
