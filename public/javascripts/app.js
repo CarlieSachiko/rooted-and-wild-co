@@ -23,8 +23,8 @@ function configRoutes($stateProvider, $urlRouterProvider, $httpProvider) {
   $httpProvider.interceptors.push('AuthInterceptor');
 
   $urlRouterProvider.otherwise('/root');
-  $urlRouterProvider.when('/home', '/home/index');
-  $urlRouterProvider.when('/shop', '/shop/index');
+  // $urlRouterProvider.when('/home', '/home/index');
+  // $urlRouterProvider.when('/shop', '/shop/index');
 
   $stateProvider
 

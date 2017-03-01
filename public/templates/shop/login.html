@@ -1,5 +1,5 @@
 <h2>Log In</h2>
-
+<p ng-show="userCtrl.loginErrMsg" class="text-danger">Invalid login credentials. Please try again.</p>
 <form ng-submit="userCtrl.login()">
   <div class="form-group">
     <label for="email">Email</label>

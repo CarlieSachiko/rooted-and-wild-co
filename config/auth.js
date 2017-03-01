@@ -5,7 +5,7 @@ module.exports.createToken = function(user, res) {
   var token = jwt.sign(
     {user: user},
     SECRET,
-    {expiresIn: '1m'}
+    {expiresIn: '5m'}
   );
   res.set('Authorization', token);
   return token;
@@ -23,6 +23,7 @@ module.exports.verifyToken = function(req, res, next) {
       }
     });
   } else {
+    res.removeHeader('Authorization');
     next();
   }
 }

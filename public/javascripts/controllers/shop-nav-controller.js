@@ -8,7 +8,7 @@ function ShopNavController($state, UserService, CartService) {
 
   vm.logout = function() {
     UserService.logout();
-    $state.go('shop');
+    $state.go('shop.index');
   };
 
   vm.getUser = UserService.getUser;
