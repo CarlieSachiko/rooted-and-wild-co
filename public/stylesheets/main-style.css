@@ -1,0 +1,160 @@
+
+/*NAV*/
+
+#nav-logo-img, #logo-img {
+  /*margin: auto !important;*/
+  max-height: 130px;
+  margin-top: 1px;
+}
+
+#logo-img {
+  margin-top: -30px;
+}
+
+.navbar-default {
+  background-color: white;
+
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  background-color: white;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.nav-link {
+  margin-top: 75px;
+}
+
+a.navbar-toggle {
+  border: none !important;
+  float: none;
+  padding: 30px 10px;
+  margin: 8px 15px 8px 0;
+  color: #777;
+}
+
+a.navbar-toggle:hover {
+  background-color: transparent !important;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media screen and (max-width:768px) {
+  .navbar-toggle {
+    display: inline-block;
+    padding: 10px !important;
+  }
+  nav.navbar {
+    border-bottom: #E1E1E1 1px solid;
+  }
+  .nav-link {
+    margin-top: 0;
+  }
+}
+
+/*ABOUT STATE*/
+.about-img {
+  max-height: 400px;
+}
+
+#about {
+  height: 66vh;
+}
+
+@media screen and (max-width:768px) {
+  #about {
+    height: 80vh;
+  }
+}
+
+/*CONTACT STATE*/
+
+#contact {
+  margin-top: -50px;
+  height: 80vh;
+}
+
+div.contact-text {
+  width: 75%;
+  margin: auto;
+}
+
+div.contact-form {
+  width: 80%;
+  margin: auto;
+  padding-top: 15px;
+}
+
+/*WORK STATE*/
+#work {
+  margin-bottom: 20px;
+  margin-top: -20px;
+}
+
+.slideshow-img {
+  max-height: 500px;
+}
+
+@keyframes slidy {
+  0%  { left: 0%; }
+  20% { left: 0%; }
+  25% { left: -100%; }
+  45% { left: -100%; }
+  50% { left: -200%; }
+  70% { left: -200%; }
+  75% { left: -300%; }
+  95% { left: -300%; }
+  100% { left: -400%; }
+}
+
+body {
+  margin: 0;
+}
+
+div#slider {
+/*  width: 80%;
+  max-width: 1000px;*/
+  overflow: hidden;
+}
+
+/*div#slider figure img { float: left; }*/
+div#slider figure img {
+  /*width: 20%;*/
+  height: auto;
+  float: left;
+}
+
+div#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  left: 0;
+  text-align: left;
+  animation: 30s slidy infinite;
+}
+
+@media screen and (max-width:768px) {
+  /*remove slidy stuff*/
+}
+
+/*FOOTER*/
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#pinterest, #ig, #fb {
+  max-width: 30px;
+  padding: 5px 5px;
+  bottom: 0;
+}

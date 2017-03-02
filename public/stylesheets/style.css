@@ -8,10 +8,6 @@ a {
   cursor: pointer;
 }
 
-section.body {
-  padding-top: 20vh;
-}
-
 [ui-view].ng-enter {
   transition: opacity 0.8s;
   opacity: 0;
@@ -70,7 +66,7 @@ section.body {
 /*NAV*/
 .navbar {
   background-color: white;
-  /*border: none;*/
+  border: none;
   margin-bottom: 40px;
   height: 140px;
 }
@@ -134,35 +130,59 @@ a.navbar-toggle:hover {
   }
 }
 
+/*HOME STATE*/
+/*#index-img {
+  width: 100%;
+  margin-top: -30px;
+  margin-bottom: 10px;
+}*/
+
+div#index {
+  margin-top: -30px;
+  margin-bottom: 10px;
+  height: 75vh;
+  background-image: url("../images/IMG_0007.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}​
+
 /*ABOUT STATE*/
-.about-img {
-  max-height: 400px;
+img#about-img {
+  max-height: 200px !important;
 }
 
-#about {
-  height: 66vh;
+div#about {
+  height: 73vh;
+}
+
+div.row.about {
+  margin: auto;
 }
 
 @media screen and (max-width:768px) {
-  #about {
+  div#about {
     height: 80vh;
+  }
+  img#about-img {
+    width: 330px;
   }
 }
 
 /*CONTACT STATE*/
 
 #contact {
-  margin-top: -50px;
-  height: 80vh;
+  /*margin-top: -50px;*/
+  height: 73vh;
 }
 
 div.contact-text {
-  width: 75%;
+  width: 65%;
   margin: auto;
 }
 
-div.contact-form {
-  width: 80%;
+div#contact-form {
+  width: 75%;
   margin: auto;
   padding-top: 15px;
 }
@@ -170,7 +190,8 @@ div.contact-form {
 /*WORK STATE*/
 #work {
   margin-bottom: 20px;
-  margin-top: -20px;
+  /*margin-top: -20px;*/
+  height: 70vh;
 }
 
 .slideshow-img {
@@ -221,6 +242,13 @@ div#slider figure {
   /*remove slidy stuff*/
 }
 
+/*BLOG STATE*/
+#blog {
+  /*padding: 0 0;*/
+  margin-bottom: 10px;
+  /*margin-top: -30px;*/
+}
+
 
 /*SHOP NAV*/
 .shop-navbar {
@@ -240,3 +268,18 @@ div#slider figure {
 .shop-inner-nav {
   background-color: transparent !important;
 }
+
+/*LOGIN STATE*/
+div#login {
+  height: 70vh;
+  width: 80vh;
+}
+
+/*SIGNUP STATE*/
+div#signup {
+  height: 70vh;
+  width: 80vh;
+}
+
+
+

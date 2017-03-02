@@ -10,15 +10,6 @@ function CartController(CartService, UserService) {
 
   vm.isLoggedIn = UserService.isLoggedIn;
 
-  // vm.emptyCart = true;
-
-  // if (vm.cart === []) {
-  //   console.log('empty')
-  //   return vm.emptyCart = true;
-  // } else {
-  //   return vm.emptyCart = false;
-  // }
-
   vm.changeItemQty = function (item, newQty) {
     CartService.changeItemQty(item, newQty);
     item.qty = newQty;

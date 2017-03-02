@@ -52,7 +52,12 @@ function configRoutes($stateProvider, $urlRouterProvider, $httpProvider) {
     .state('home.blog', {
       url: '/blog',
       templateUrl: 'templates/blog.html',
-      controller: 'MainController as mainCtrl'
+      controller: 'BlogController as blogCtrl'
+    })
+    .state('home.show-blog', {
+      url: '/blog/:postId',
+      templateUrl: 'templates/show-blog.html',
+      controller: 'ShowBlogController as showBlogCtrl'
     })
     .state('home.work', {
       url: '/work',
@@ -62,7 +67,7 @@ function configRoutes($stateProvider, $urlRouterProvider, $httpProvider) {
     .state('home.contact', {
       url: '/contact',
       templateUrl: 'templates/contact.html',
-      controller: 'MainController as mainCtrl'
+      controller: 'ContactController as contactCtrl'
     })
 
     // SHOP STATES
@@ -77,9 +82,9 @@ function configRoutes($stateProvider, $urlRouterProvider, $httpProvider) {
       controller: 'BouquetController as bouqCtrl'
     })
 
-    .state('shop.show_bouquet', {
+    .state('shop.show-bouquet', {
       url: '/details/:bouqId',
-      templateUrl: 'templates/shop/show_bouquet.html',
+      templateUrl: 'templates/shop/show-bouquet.html',
       controller: 'DetailController as detailCtrl'
     })
 

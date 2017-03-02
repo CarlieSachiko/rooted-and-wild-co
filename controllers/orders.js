@@ -16,9 +16,3 @@ function getAllOrders(req, res, next) {
     res.json(orders);
   }).catch(err => res.status(400).json(err));
 }
-
-function getOrder(req, res, next) {
-  Bouquet.findById(req.params.id).then(bouquet => {
-    res.json(bouquet);
-  }).catch(err => res.status(400).json(err));
-}

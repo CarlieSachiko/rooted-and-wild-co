@@ -1,0 +1,40 @@
+<h2>{{showBlogCtrl.post.title}}</h2>
+<p>{{showBlogCtrl.post.createdAt | date:'longDate'}}</p>
+<hr>
+<p ng-repeat="paragraph in showBlogCtrl.post.paragraphs">{{paragraph}}</p>
+<p>xo. Mackenzie</p>
+
+<img ng-repeat="img in showBlogCtrl.post.images" ng-src="{{img}}" alt="{{showBlogCtrl.post.title}}" height="500">
+
+<br>
+<br>
+
+<div>
+  <span ng-click="showBlogCtrl.addLike(showBlogCtrl.post)" class="glyphicon glyphicon-heart" aria-hidden="true"></span> {{showBlogCtrl.post.likes}} Likes
+</div>
+<br>
+<br>
+
+
+  <!-- <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> {{showBlogCtrl.post.comments.length}} Comment </a> -->
+<div class="add-comment">
+  <h3>Comments ({{showBlogCtrl.post.comments.length}})</h3>
+  <form>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Name" ng-model="showBlogCtrl.name">
+    </div>
+    <div class="form-group">
+      <label for="comment">Comment</label>
+      <textarea class="form-control" rows="3" ng-model="showBlogCtrl.comment"></textarea>
+    </div>
+    <button ng-click="showBlogCtrl.addComment(showBlogCtrl.post)" type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+<hr>
+
+<div class="comments" ng-repeat="comment in showBlogCtrl.post.comments track by $index">
+<span><h4><b>{{comment.author}}</b></h4></span><span>{{comment.createdAt | date:'mediumDate'}}</span>
+  <p>{{comment.content}}</p>
+  <hr>
+</div>

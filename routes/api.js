@@ -3,6 +3,9 @@ var router = express.Router();
 var bouquetCtrl = require('../controllers/bouquets');
 var userCtrl = require('../controllers/users');
 var orderCtrl = require('../controllers/orders');
+var contactCtrl = require('../controllers/contact');
+var blogCtrl = require('../controllers/blog');
+var commentCtrl = require('../controllers/comments');
 
 // Public routes (no auth required)
 router.post('/users/login', userCtrl.login);
@@ -17,6 +20,15 @@ router.post('/bouquets', bouquetCtrl.addBouquet);
 router.get('/orders', orderCtrl.getAllOrders);
 router.post('/orders', orderCtrl.submitOrder);
 
+router.get('/blog-posts', blogCtrl.getAllPosts);
+router.get('/blog-posts/:id', blogCtrl.getPost);
+router.post('/blog-posts', blogCtrl.addPost);
+router.put('/blog-posts/:id', blogCtrl.updatePost);
+
+router.post('/comments', commentCtrl.addComment);
+
+router.post('/contact', contactCtrl.sendMail);
+
 
 // Auth middleware (routes below need authentication)
 router.use(function(req, res, next) {
@@ -27,8 +39,5 @@ router.use(function(req, res, next) {
 // Protected routes (authentication required)
 router.get('/users/:id/orders', userCtrl.getOrders);
 router.put('/users/:id', userCtrl.addOrder);
-// router.get('/users/:id/favorite', bouquetCtrl.getFavorite);
-// router.post('/users/:id/favorite', bouquetCtrl.saveToBasket);
-// router.delete('/users/:id/favorite/:id/delete', bouquetCtrl.deleteFavorite);
 
 module.exports = router;

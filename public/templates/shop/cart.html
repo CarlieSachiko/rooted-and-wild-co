@@ -1,8 +1,8 @@
 <h1>Cart</h1>
 <h5><a ui-sref="shop.index">Continue Shopping</a></h5>
 <hr>
-<div ng-show="cartCtrl.emptyCart">No items in your cart. How sad.</div>
-<div ng-hide="cartCtrl.emptyCart" ng-repeat="item in cartCtrl.cart track by $index">
+<div ng-hide="cartCtrl.cart.length">No items in your cart. How sad.</div>
+<div ng-repeat="item in cartCtrl.cart track by $index">
   <img ng-src="{{item.image}}" height="200" alt="">
   <p>{{item.name}} </p>
   <p>{{item.price*item.qty | currency:'$'}}</p>
@@ -15,6 +15,5 @@
 <hr>
 <div>
   <h4>Total: {{cartCtrl.getTotal() | currency:'$'}}</h4>
-  <!-- <a ng-hide="cartCtrl.isLoggedIn()" ui-sref="guest-checkout" type="button">Guest Checkout</a> -->
   <a ui-sref="shop.checkout" type="button">Checkout</a>
 </div>

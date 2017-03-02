@@ -6,8 +6,12 @@ BouquetController.$inject = ['$http', 'BouquetService', 'CartService'];
 function BouquetController($http, BouquetService, CartService) {
   var vm = this;
   vm.bouquets = BouquetService.query();
-  vm.addItem = function() {
-    CartService.addItem();
-    vm.addedMsg();
+  vm.addItem = function(item) {
+    CartService.addItem(item);
+    addedMsg();
+  }
+
+  function addedMsg() {
+
   }
 }

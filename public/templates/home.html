@@ -1,15 +1,11 @@
-<!-- <link rel='stylesheet' href='/stylesheets/main-style.css' /> -->
-
-<section class="body">
-
-  <nav class="navbar navbar-default text-center navbar-fixed-top">
+  <nav class="navbar navbar-default text-center">
       <a type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">menu</a>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           <li><a class="nav-link" ui-sref="home.index">home</a></li>
           <li><a class="nav-link" ui-sref="home.about">about</a></li>
           <li><a id="mid-nav" class="nav-link" ui-sref="home.blog">blog</a></li>
-          <li><a ui-sref="home" id="nav-logo-img"><img src="images/R&W-logo.png" alt="R&W logo" id="nav-logo-img"></a></li>
+          <li><a ui-sref="home.index" id="nav-logo-img"><img src="images/R&W-logo.png" alt="R&W logo" id="nav-logo-img"></a></li>
           <li><a class="nav-link" ui-sref="home.work">work</a></li>
           <li><a class="nav-link" ui-sref="home.contact">contact</a></li>
           <li><a class="nav-link" ui-sref="shop.index" target="blank">shop</a></li>
@@ -19,12 +15,7 @@
 
     <div id="logo-div"></div>
 
-    <br>
-    <br>
-
-    <div ui-view class="container"></div>
-
-    <div id="instafeed"></div>
+    <div ui-view></div>
 
     <footer class="footer footer-fixed-to-bottom container">
       <!-- <span class="text-muted">&copy; 2017 Rooted & Wild</span> -->
@@ -36,4 +27,3 @@
     </footer>
 
  <script src="javascripts/main.js"></script>
-</section>

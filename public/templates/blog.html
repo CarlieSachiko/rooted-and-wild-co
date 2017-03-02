@@ -1,1 +1,27 @@
-<h1>Blog</h1>
+<div id="blog" class="container">
+  <div class="row">
+
+    <div ng-repeat="post in blogCtrl.posts" class="col-xs-12 col-md-8">
+      <a ui-sref="home.show-blog({postId: post._id})"><h3>{{post.title}}</h3></a>
+      <p>{{post.createdAt | date:'longDate'}}</p>
+      <hr>
+      <p ng-repeat="paragraph in post.paragraphs">{{paragraph}}</p>
+      <p>xo. Mackenzie</p>
+
+      <img ng-repeat="img in post.images" ng-src="{{img}}" alt="{{post.title}}" height="400">
+      <br>
+      <br>
+
+      <div>
+        <span ng-click="blogCtrl.addLike(post)" class="glyphicon glyphicon-heart" aria-hidden="true"></span> {{post.likes}} Likes |
+        <a ui-sref="home.show-blog({postId: post._id})"><span ng-click="blogCtrl.addLike(post)" class="glyphicon glyphicon-comment" aria-hidden="true"></span> {{post.comments.length}} Comment </a>
+      </div>
+    </div>
+
+    <div class="col-md-3 pull-right">
+      <h4>Connect</h4>
+      <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/0e6287206a025a00bfdc1a53e39578a8.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+    </div>
+
+  </div>
+</div>
