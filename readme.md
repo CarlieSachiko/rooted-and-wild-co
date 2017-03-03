@@ -39,6 +39,7 @@ Follow the link below to check it out!
 * UI for work page
 * Persisting the cart
 * Authorization
+* Sending email from the site
 
 --------
 ###Unsolved Problems
