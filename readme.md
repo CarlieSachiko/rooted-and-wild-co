@@ -39,6 +39,7 @@ Follow the link below to check it out!
 * Responsive logo in the navbar 
 * Transition is too fast on first image on home page
 * Instagram feed
+* Preventing users from liking posts multiple times
 
 --------
 ###Next Steps
