@@ -61,4 +61,5 @@ Here is a list of things I would like to do moving forward:
 * Prevent users from liking posts multiple times
 * Put arrows on the price filter
 * More consistent IIFEs
+* Add favicon
 
