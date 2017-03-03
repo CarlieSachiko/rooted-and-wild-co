@@ -1,7 +1,7 @@
+![alt](http://i.imgur.com/fAJAK7e.jpg)
 #Rooted & Wild Co.
 ####Created By Carlie Clippinger
 --------
-![alt](http://i.imgur.com/fAJAK7e.jpg)
 ###About Rooted & Wild Co.
 Rooted and Wild is, my dear friend, Mackenzie Myers's personal website featuring her floral designs. I designed it with her in mind, staying true to her aesthetic and feel. 
 
