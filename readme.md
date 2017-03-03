@@ -36,7 +36,9 @@ Follow the link below to check it out!
 --------
 ###Major Hurdles
 * Understanding the MEAN Stack
-* 
+* UI for work page
+* Persisting the cart
+* Authorization
 
 --------
 ###Unsolved Problems
