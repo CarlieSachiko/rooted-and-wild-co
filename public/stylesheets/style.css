@@ -397,6 +397,9 @@ div#slider figure {
 .checkout-info {
   /*width: 80vh;*/
 }
+.select {
+  border-radius: 0 !important;
+}
 
 /*CONFIRM STATE*/
 .confirm {

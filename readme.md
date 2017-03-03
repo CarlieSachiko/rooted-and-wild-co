@@ -33,4 +33,5 @@ Here is a list of things I would like to do moving forward:
 * Add liking system to blogs
 * Make more responsive
 * Blog pagination
+* Put restrictions on the password length and characters used
 
