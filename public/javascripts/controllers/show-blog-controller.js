@@ -23,7 +23,6 @@ function ShowBlogController($http, $stateParams, BlogService, CommentService) {
       author: vm.name,
       content: vm.comment
     }, function(comment) {
-      console.log(comment);
       post.comments.push(comment);
     });
     vm.name = '';

@@ -39,7 +39,6 @@ Follow the link below to check it out!
 * Responsive logo in the navbar 
 * Transition is too fast on first image on home page
 * Instagram feed
-* People being able to like multiple times
 
 --------
 ###Next Steps
@@ -58,4 +57,7 @@ Here is a list of things I would like to do moving forward:
 * Add a quck view option to main shop page
 * Enlarge images on click in blogs
 * Put blogs in descending order
+* Prevent users from liking posts multiple times
+* Put arrows on the price filter
+* More consistent IIFEs
 

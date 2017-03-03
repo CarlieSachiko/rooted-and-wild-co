@@ -22,7 +22,6 @@ function CheckoutController(CartService, UserService, OrderService, $state) {
   vm.totalPrice = vm.getTotal() + (vm.getTotal() * .0725);
 
   vm.submitOrder = function() {
-    // if (vm.address, vm.city, vm.state, vm.zipcode, vm.payMethod){
       var user = UserService.getUser();
       OrderService.save({
         items: vm.cart,
@@ -43,6 +42,4 @@ function CheckoutController(CartService, UserService, OrderService, $state) {
       CartService.clearCart();
       vm.cart = [];
     }
-  // }
-
 }
