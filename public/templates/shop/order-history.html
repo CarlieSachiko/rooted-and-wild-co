@@ -2,6 +2,8 @@
   <h1>Your Order History</h1>
   <hr>
 
+  <div ng-hide="{{orderCtrl.orders.length}}">No orders yet! <a ui-sref="shop.index"> Let's fix that.</a></div>
+
   <div ng-repeat="order in orderCtrl.orders" class="container">
     <h3><b>Order Id: {{order._id}}</b></h3>
     <h4>Delivery Address:</h4>
@@ -12,7 +14,7 @@
     <div ng-repeat="item in order.items">
       <div class="row">
         <div class="col-md-1">
-          <img src="{{item.image}}" height="100" alt="Bouquet {{item.name}}">
+          <img ng-src="{{item.image}}" height="100" alt="Bouquet {{item.name}}">
         </div>
         <div class="col-md-4">
           <h3>{{item.name}}</h3>

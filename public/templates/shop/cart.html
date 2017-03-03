@@ -28,7 +28,7 @@
       </div>
     </div>
 
-    <div id="cart-total" class="col-xs-4">
+    <div ng-show="cartCtrl.cart.length" id="cart-total" class="col-xs-4">
       <h4>Total: {{cartCtrl.getTotal() | currency:'$'}}</h4>
       <a ng-show="cartCtrl.isLoggedIn()" ui-sref="shop.checkout" type="button"><h4>Checkout</h4></a>
       <p ng-hide="cartCtrl.isLoggedIn()">Please <a ui-sref="shop.login">login</a> or <a ui-sref="shop.signup">create an account</a> to checkout</p>

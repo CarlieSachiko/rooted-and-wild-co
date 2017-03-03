@@ -19,25 +19,6 @@
 $(document).ready (function(){
   console.log('js loaded');
 
-  // $(function() {
-  // var index = $('#index');
-  // var backgrounds = new Array(
-  // 'url("../images/IMG_0007.jpg")',
-  // 'url("../images/IMG_0057.jpg")'
-  // );
-  // var current = 0;
-
-  // function nextBackground() {
-  // index.css(
-  // 'background',
-  // backgrounds[current = ++current % backgrounds.length]
-  // );
-
-  // setTimeout(nextBackground, 10000);
-  // }
-  // setTimeout(nextBackground, 10000);
-  // index.css('background', backgrounds[0]);
-  // });
 
 });
 

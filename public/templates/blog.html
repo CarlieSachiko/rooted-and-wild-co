@@ -13,15 +13,16 @@
       <br>
 
       <div>
-        <span ng-click="blogCtrl.addLike(post)" class="glyphicon glyphicon-heart" aria-hidden="true"></span> {{post.likes}} Likes |
-        <a ui-sref="home.show-blog({postId: post._id})"><span ng-click="blogCtrl.addLike(post)" class="glyphicon glyphicon-comment" aria-hidden="true"></span> {{post.comments.length}} Comment </a>
+        <!-- <span ng-click="blogCtrl.addLike(post)" class="glyphicon glyphicon-heart" aria-hidden="true"></span> {{post.likes}} Likes | -->
+        <a ui-sref="home.show-blog({postId: post._id})"><span ng-click="blogCtrl.addLike(post)" class="glyphicon glyphicon-comment" aria-hidden="true"></span> ({{post.comments.length}}) Comments </a>
       </div>
       <hr>
     </div>
 
     <div class="col-md-3 pull-right">
       <h4>Connect</h4>
-      <script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/0e6287206a025a00bfdc1a53e39578a8.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+      <!-- IG Feed -->
+      <!-- <script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/0e6287206a025a00bfdc1a53e39578a8.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe> -->
       <span><a href="https://www.pinterest.com/rootedandwildco/" target="blank"><img id="pinterest" src="images/pinterest-logo.jpg" alt="Rooted and Wild Pinterest"></a></span>
       <span><a href="https://www.facebook.com/rootedandwildco/" target="blank"><img id="fb" src="images/fb-logo.jpg" alt="Rooted and Wild Facebook"></a></span>
       <span><a href="https://instagram.com/rootedandwild" target="blank"><img id="ig" src="images/ig-logo.png" alt="Rooted and Wild IG"></a></span>

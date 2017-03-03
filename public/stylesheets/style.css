@@ -250,8 +250,11 @@ div#contact-form {
 /*WORK STATE*/
 #work {
   margin-bottom: 20px;
-  /*margin-top: -20px;*/
-  height: 70vh;
+  margin-top: -20px;
+}
+
+.work-img {
+  max-height: 600px;
 }
 
 .slideshow-img {
@@ -402,7 +405,7 @@ div#slider figure {
 
 /*ORDER-HISTORY STATE*/
 .order-history {
-  height: 73vh;
+  /*height: 73vh;*/
 }
 
 /*LOGIN STATE*/
