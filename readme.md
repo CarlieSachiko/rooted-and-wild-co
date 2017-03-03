@@ -26,6 +26,9 @@ The shop element of the site is not something Mackenzie will actually be using. 
 * Mongoose
 * Heroku
 * Github
+* mLab
+* Nodemailer
+* AJAX
 
 --------
 ###Getting Started
