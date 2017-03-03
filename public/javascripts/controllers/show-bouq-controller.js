@@ -1,9 +1,9 @@
 angular.module('app')
-  .controller('DetailController', DetailController);
+  .controller('ShowBouqController', ShowBouqController);
 
-DetailController.$inject = ['$http', 'BouquetService', '$stateParams', 'CartService'];
+ShowBouqController.$inject = ['$http', 'BouquetService', '$stateParams', 'CartService'];
 
-function DetailController($http, BouquetService, $stateParams, CartService) {
+function ShowBouqController($http, BouquetService, $stateParams, CartService) {
   var vm = this;
 
   if ($stateParams.bouqId) {

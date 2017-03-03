@@ -4,7 +4,7 @@
 
   <div class="row filters">
     <div class="col-xs-6 pull-left">
-      <a ng-click="vm.desc=!vm.desc;vm.sortBy='price'" class="align-bottom">Sort by price</a>
+      <a ng-click="vm.desc=!vm.desc;vm.sortBy='price'" class="align-bottom">Sort by price <span ng-click="bouqCtrl.changePriceArrow()" ng-show="bouqCtrl.priceDescFilter" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></a>
     </div>
     <div class="col-xs-6 text-right pull-right">
       <p>Sort by flower type: </p>
@@ -14,7 +14,8 @@
       <a ng-click="vm.selectedFlower='sunflower'">Sunflower</a> |
       <a ng-click="vm.selectedFlower='wildflower'">Wildflower</a> |
       <a ng-click="vm.selectedFlower='tulip'">Tulip</a> |
-      <a ng-click="vm.selectedFlower=null">All</a>
+      <a ng-click="vm.selectedFlower='amaryllis'">Amaryllis</a> |
+      <a ng-click="vm.selectedFlower=null">View All</a>
     </div>
   </div>
 

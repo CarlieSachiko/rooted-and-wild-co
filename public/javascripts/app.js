@@ -83,7 +83,7 @@ function configRoutes($stateProvider, $urlRouterProvider, $httpProvider) {
     .state('shop.show-bouquet', {
       url: '/details/:bouqId',
       templateUrl: 'templates/shop/show-bouquet.html',
-      controller: 'DetailController as detailCtrl'
+      controller: 'ShowBouqController as showBouqCtrl'
     })
 
     .state('shop.login', {
