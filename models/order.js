@@ -9,7 +9,8 @@ var orderSchema = new mongoose.Schema({
   delivery_state: String,
   delivery_zipcode: String,
   items: [],
-  payment_method: String
+  payment_method: String,
+  createdAt: {type: Date, default: Date.now}
 })
 
 

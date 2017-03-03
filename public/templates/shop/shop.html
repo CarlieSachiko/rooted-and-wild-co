@@ -15,16 +15,16 @@
 
 <div class="shop-nav container">
   <ul class="nav navbar-nav pull-right shop-inner-nav">
-    <li ng-hide="shopNavCtrl.isLoggedIn()"><a ui-sref="shop.login">Log In</a></li>
+    <li ng-hide="shopNavCtrl.isLoggedIn()"><a ui-sref="shop.login" class="shop-nav-link" >Log In</a></li>
     <li ng-show="shopNavCtrl.isLoggedIn()" class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account <span class="caret"></span></a>
+      <a class="dropdown-toggle shop-nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account <span class="caret"></span></a>
       <ul class="dropdown-menu">
         <li><a ui-sref="shop.order-history">Order history</a></li>
         <li role="separator" class="divider"></li>
         <li><a ng-click="shopNavCtrl.logout()">Log Out</a></li>
       </ul>
     </li>
-    <li><a ui-sref="shop.cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart ({{shopNavCtrl.getCart().length}})</a></li>
+    <li><a ui-sref="shop.cart" class="shop-nav-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart ({{shopNavCtrl.getCart().length}})</a></li>
   </ul>
 </div>
 

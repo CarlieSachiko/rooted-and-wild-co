@@ -84,6 +84,7 @@ a:hover {
 
 .nav-link {
   margin-top: 50px;
+  font-size: 17px;
 }
 
 a.navbar-toggle {
@@ -313,7 +314,7 @@ div#slider figure {
 
 .shop-nav, .shop-inner-nav {
   display: block !important;
-  margin-top: -30px !important;
+  margin-top: -20px !important;
 }
 
 @media screen and (max-width:768px) {
@@ -325,6 +326,10 @@ div#slider figure {
 
 .shop-inner-nav {
   background-color: transparent !important;
+}
+
+.shop-nav-link:hover {
+  background-color: white !important;
 }
 
 /*SHOP HOME STATE*/

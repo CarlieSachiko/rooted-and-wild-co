@@ -34,10 +34,14 @@ Follow the link below to check it out!
 ###Unsolved Problems
 * Duplicate items added to cart when anonymous user signs in to their account and has added the same item to their cart before signing in
 * Responsive logo in the navbar 
+* Transition is too fast on first image on home page
+* Instagram feed
+* People being able to like multiple times
 
 --------
 ###Next Steps
 Here is a list of things I would like to do moving forward:
+* Fill out the text with Mackenzie's words
 * Implement a scheduling system, so potential clients can work with Mackenzie to find the best dates for their events
 * Launch using gulp
 * Add liking system to blogs
@@ -50,4 +54,5 @@ Here is a list of things I would like to do moving forward:
 * Add arrows to the price sorting
 * Add a quck view option to main shop page
 * Enlarge images on click in blogs
+* Put blogs in descending order
 
