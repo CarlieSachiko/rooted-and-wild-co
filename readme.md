@@ -28,7 +28,7 @@ The shop element of the site is not something Mackenzie will actually be using. 
 * Github
 
 --------
-<!-- ###Installation Instructions -->
+###Getting Started
 Follow the link below to check it out!
 
 [Rooted & Wild Co.](https://rooted-and-wild.herokuapp.com/#!/home/index)
