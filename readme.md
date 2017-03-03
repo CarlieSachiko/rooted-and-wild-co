@@ -3,7 +3,9 @@
 --------
 ![alt](http://i.imgur.com/fAJAK7e.jpg)
 ###About Rooted & Wild Co.
-Rooted and Wild is, my dear friend, Mackenzie Myers's personal website, featuring her floral designs. The shop element of the site is not something Mackenzie will be using. I implemented it for learning purposes. I really enjoyed the development process for this project. Being my first MEAN Stack app, I was a little nervous since I didn't fully understand how the client side and server side worked together. But working through the problems I encountered and delving deeper into the code, I gained such a clearer view of the MEAN Stack and the numerous ways I could use it. It is incredibly flexible, allowing me to create what I want, how I want. I looked forward to adding the finishing touches to the site so Makenzie can launch it in the next few weeks.  
+Rooted and Wild is, my dear friend, Mackenzie Myers's personal website featuring her floral designs. I designed it with her in mind, staying true to her aesthetic and feel. 
+
+The shop element of the site is not something Mackenzie will actually be using. I implemented it for learning purposes since this site is originally a project for a class. Overall, I really enjoyed the development process for this project. Being my first MEAN Stack app, I was a little nervous at the beginning hitting a lot of road blocks since I didn't fully understand how the client side and server side worked together. But working through the problems I encountered and diving deeper into the code, I gained such a clearer view of the MEAN Stack and the numerous ways I could use it. It is incredibly flexible, allowing me to create what I want, how I want. I looked forward to adding the finishing touches to the site so Makenzie can launch it in the next few weeks.  
 
 [Trello Board](https://trello.com/b/9HaE286r/rooted-and-wild)
 
