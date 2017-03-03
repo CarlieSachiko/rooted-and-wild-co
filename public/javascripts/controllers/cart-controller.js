@@ -6,6 +6,8 @@ CartController.$inject = ['CartService', 'UserService'];
 function CartController(CartService, UserService) {
   var vm = this;
 
+  vm.isLoggedIn = UserService.isLoggedIn;
+
   vm.cart = CartService.getCart();
 
   vm.isLoggedIn = UserService.isLoggedIn;

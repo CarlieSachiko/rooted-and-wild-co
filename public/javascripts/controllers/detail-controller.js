@@ -12,5 +12,8 @@ function DetailController($http, BouquetService, $stateParams, CartService) {
     });
   }
 
-  vm.addItemFromShow = CartService.addItemFromShow;
+  vm.addItemFromShow = function() {
+    CartService.addItemFromShow(vm.bouquet, vm.qty);
+    toastr.success('Added to cart!');
+  }
 }

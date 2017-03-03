@@ -1,19 +1,40 @@
-<h1>Cart</h1>
-<h5><a ui-sref="shop.index">Continue Shopping</a></h5>
-<hr>
-<div ng-hide="cartCtrl.cart.length">No items in your cart. How sad.</div>
-<div ng-repeat="item in cartCtrl.cart track by $index">
-  <img ng-src="{{item.image}}" height="200" alt="">
-  <p>{{item.name}} </p>
-  <p>{{item.price*item.qty | currency:'$'}}</p>
-  <p>
-    Quantity: <input type="number" value="{{item.qty}}" ng-model="cartCtrl.itemQty[$index]">
-    <a ng-click="cartCtrl.changeItemQty(item, cartCtrl.itemQty[$index])"> Save</a>
-  </p>
-  <p><a ng-click="cartCtrl.removeItem(item)">Remove</a></p>
+<div class="cart container">
+  <h1>Cart</h1>
+  <h5><a ui-sref="shop.index">Continue Shopping</a></h5>
+  <hr>
+
+  <div ng-hide="cartCtrl.cart.length">No items in your cart. How sad.</div>
+
+  <div class="row container">
+
+    <div class="row col-xs-8 container">
+      <div ng-repeat="item in cartCtrl.cart track by $index">
+        <div class="row">
+          <div class="col-xs-3">
+            <a ui-sref="shop.show-bouquet({bouqId: item._id})"><img ng-src="{{item.image}}" height="200" alt="Bouquet: {{item.name}}"></a>
+          </div>
+
+          <div class="col-xs-5">
+            <h4>{{item.name}} </h4>
+            <p>{{item.price*item.qty | currency:'$'}}</p>
+            <p>
+              Quantity: <input type="number" value="{{item.qty}}" ng-model="cartCtrl.itemQty[$index]">
+            </p>
+            <p><a ng-click="cartCtrl.changeItemQty(item, cartCtrl.itemQty[$index])"> Save </a></p>
+            <p><a ng-click="cartCtrl.removeItem(item)">Remove</a></p>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+
+    <div id="cart-total" class="col-xs-4">
+      <h4>Total: {{cartCtrl.getTotal() | currency:'$'}}</h4>
+      <a ng-show="cartCtrl.isLoggedIn()" ui-sref="shop.checkout" type="button"><h4>Checkout</h4></a>
+      <p ng-hide="cartCtrl.isLoggedIn()">Please <a ui-sref="shop.login">login</a> or <a ui-sref="shop.signup">create an account</a> to checkout</p>
+    </div>
+
+  </div>
+
 </div>
-<hr>
-<div>
-  <h4>Total: {{cartCtrl.getTotal() | currency:'$'}}</h4>
-  <a ui-sref="shop.checkout" type="button">Checkout</a>
-</div>
+

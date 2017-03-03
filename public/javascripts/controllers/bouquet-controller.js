@@ -1,17 +1,15 @@
 angular.module('app')
   .controller('BouquetController', BouquetController);
 
-BouquetController.$inject = ['$http', 'BouquetService', 'CartService'];
+BouquetController.$inject = ['$http', 'BouquetService', 'CartService', '$timeout'];
 
-function BouquetController($http, BouquetService, CartService) {
+function BouquetController($http, BouquetService, CartService, $timeout) {
   var vm = this;
   vm.bouquets = BouquetService.query();
+
   vm.addItem = function(item) {
     CartService.addItem(item);
-    addedMsg();
+    toastr.success('Added to cart!');
   }
 
-  function addedMsg() {
-
-  }
 }

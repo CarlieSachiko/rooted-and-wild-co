@@ -18,15 +18,14 @@ function ShowBlogController($http, $stateParams, BlogService, CommentService) {
   }
 
   vm.addComment = function(post) {
-    CommentService.save({
-      blogId: post._id,
+    CommentService.newForPost({
+      id: post._id,
       author: vm.name,
       content: vm.comment
     }, function(comment) {
       console.log(comment);
       // vm.comments.push(comment);
-      post.comments.push(comment._id);
-      post.$update({id: post._id});
+      post.comments.push(comment);
     });
     vm.name = '';
     vm.comment = '';

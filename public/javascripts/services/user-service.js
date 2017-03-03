@@ -16,7 +16,7 @@ function userService($http, TokenService) {
   };
 
   function login(credentials) {
-    return $http.post('/api/users/login', credentials);
+    return $http.post('/api/users/login', credentials)
   }
 
   function logout() {

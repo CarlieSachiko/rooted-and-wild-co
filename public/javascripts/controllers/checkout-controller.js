@@ -6,8 +6,6 @@ CheckoutController.$inject = ['CartService', 'UserService', 'OrderService', '$st
 function CheckoutController(CartService, UserService, OrderService, $state) {
   var vm = this;
 
-  vm.isLoggedIn = UserService.isLoggedIn;
-
   vm.cart = CartService.getCart();
 
   vm.getTotal = function(){
@@ -24,7 +22,7 @@ function CheckoutController(CartService, UserService, OrderService, $state) {
   vm.totalPrice = vm.getTotal() + (vm.getTotal() * .0725);
 
   vm.submitOrder = function() {
-    if (vm.address, vm.city, vm.state, vm.zipcode, vm.payMethod){
+    // if (vm.address, vm.city, vm.state, vm.zipcode, vm.payMethod){
       var user = UserService.getUser();
       OrderService.save({
         items: vm.cart,
@@ -37,14 +35,14 @@ function CheckoutController(CartService, UserService, OrderService, $state) {
         payment_method: vm.payMethod
       }, function(order) {
         console.log(order);
+        $state.go('shop.confirm-order', {orderId: order._id});
         UserService.addOrder(user, order._id, function(data) {
           console.log(data);
         });
       });
-      $state.go('shop.confirm-order');
       CartService.clearCart();
       vm.cart = [];
     }
-  }
+  // }
 
 }

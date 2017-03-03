@@ -1,13 +1,28 @@
-<h1>Your Order History</h1>
+<div class="container order-history">
+  <h1>Your Order History</h1>
+  <hr>
 
-<div ng-repeat="order in orderCtrl.orders">
-  {{order}}
+  <div ng-repeat="order in orderCtrl.orders" class="container">
+    <h3><b>Order Id: {{order._id}}</b></h3>
+    <h4>Delivery Address:</h4>
+    <p>{{order.delivery_address}}</p>
+    <p>{{order.delivery_city}}, &nbsp;{{order.delivery_state}} {{order.delivery_zipcode}}</p>
 
-  <p>Order Id: {{order._id}}</p>
-  <p>Items ordered: </p>
-  <p ng-repeat="item in order.items">
-    {{item.name}}
-    {{item.qty}}
-  </p>
-
+    <br>
+    <div ng-repeat="item in order.items">
+      <div class="row">
+        <div class="col-md-1">
+          <img src="{{item.image}}" height="100" alt="Bouquet {{item.name}}">
+        </div>
+        <div class="col-md-4">
+          <h3>{{item.name}}</h3>
+          <p>Quantity: {{item.qty}}</p>
+          <p>Price: {{item.qty*item.price | currency:'$'}}</p>
+        </div>
+      </div>
+      <br>
+    </div>
+    <h4>Total: {{order.total_price | currency:'$'}}</h4>
+    <hr>
+  </div>
 </div>

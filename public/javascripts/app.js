@@ -11,7 +11,7 @@ function runBlock($rootScope, $state, UserService) {
   $rootScope.$on('$stateChangeStart', function(evt, toState) {
     if (toState.loginRequired && !UserService.isLoggedIn()) {
       evt.preventDefault();
-      $state.go('login');
+      $state.go('shop.login');
     }
   });
 }
@@ -22,9 +22,7 @@ function configRoutes($stateProvider, $urlRouterProvider, $httpProvider) {
 
   $httpProvider.interceptors.push('AuthInterceptor');
 
-  $urlRouterProvider.otherwise('/root');
-  // $urlRouterProvider.when('/home', '/home/index');
-  // $urlRouterProvider.when('/shop', '/shop/index');
+  $urlRouterProvider.otherwise('/home/index');
 
   $stateProvider
 
@@ -110,12 +108,14 @@ function configRoutes($stateProvider, $urlRouterProvider, $httpProvider) {
       url: '/checkout',
       templateUrl: 'templates/shop/checkout.html',
       controller: 'CheckoutController as checkoutCtrl',
+      loginRequired: true
     })
 
     .state('shop.confirm-order', {
-      url: '/confirm',
+      url: '/confirm/:orderId',
       templateUrl: 'templates/shop/confirm-order.html',
-      controller: 'ConfirmController as confirmCtrl'
+      controller: 'ConfirmController as confirmCtrl',
+      loginRequired: true
     })
 
     .state('shop.order-history', {

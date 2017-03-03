@@ -1,21 +1,38 @@
+<div class="container checkout">
 <h1>Review Your Order:</h1>
-  <p ng-hide="checkoutCtrl.isLoggedIn()"><a ui-sref="login">Login</a> or proceed as guest</p>
-  <p><a ui-sref="cart">Edit Cart</a></p>
+
   <hr>
-  <div ng-repeat="item in checkoutCtrl.cart">
-    <img ng-src="{{item.image}}" height="200" alt="">
-    <p>{{item.name}} </p>
-    <p>{{item.price*item.qty | currency:'$'}}</p>
-    <p>Quantity: {{item.qty}}</p>
+
+  <div class="row container">
+    <div class="row col-xs-8 container">
+      <div ng-repeat="item in checkoutCtrl.cart">
+        <div class="row">
+          <div class="col-xs-3">
+            <a ui-sref="shop.show-bouquet({bouqId: item._id})"><img ng-src="{{item.image}}" height="200" alt="Bouquet: {{item.name}}"></a>
+          </div>
+
+          <div class="col-xs-5">
+            <h4>{{item.name}} </h4>
+            <p>{{item.price*item.qty | currency:'$'}}</p>
+            <p>Quantity: {{item.qty}}</p>
+          </div>
+        </div>
+        <br>
+      </div>
+      <h4><a ui-sref="shop.cart">Edit Cart</a></h4>
+    </div>
+    <div id="cart-total" class="col-xs-4">
+        <h4>Sub Total: {{checkoutCtrl.getTotal() | currency:'$'}}</h4>
+        <h4><i>Tax: {{checkoutCtrl.tax | currency:'$'}}</i></h4>
+        <hr>
+        <h3>Total: {{checkoutCtrl.totalPrice | currency:'$'}}</h3>
+    </div>
   </div>
-  <hr>
-  <h5>Sub Total: {{checkoutCtrl.getTotal() | currency:'$'}}</h5>
-  <h5>Tax: {{checkoutCtrl.tax | currency:'$'}}</h5>
-  <h4>Total: {{checkoutCtrl.totalPrice | currency:'$'}}</h4>
+
+  <br>
   <hr>
 
   <h3>Delivery Address</h3>
-
   <form>
     <div class="form-group">
       <label for="exampleInputEmail1">Address</label>
@@ -33,6 +50,8 @@
       <label for="exampleInputEmail1">Zipcode</label>
       <input type="text" class="form-control" placeholder="zipcode" ng-model="checkoutCtrl.zipcode" required>
     </div>
+
+  <br>
   <hr>
     <div class="form-group">
       <h3>Choose Payment Method:</h3>
@@ -44,14 +63,12 @@
         <option>A good joke</option>
       </select>
     </div>
+    <br>
+    <hr>
     <div class="form-group">
-      <h3><button type="submit" class="btn btn-default" ng-click="checkoutCtrl.submitOrder()">Submit Order</button></h3>
+      <h3><button type="submit" class="btn btn-default" ng-click="checkoutCtrl.submitOrder()">Submit Order!</button></h3>
     </div>
   </form>
-
-
-
-  <hr>
 
 
 </div>

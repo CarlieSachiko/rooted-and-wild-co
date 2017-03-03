@@ -10,7 +10,8 @@ function CartService(UserService) {
     addItem,
     getCart,
     changeItemQty,
-    addItemFromShow
+    addItemFromShow,
+    addCarts
   };
 
   function removeItem(item) {
@@ -52,7 +53,6 @@ function CartService(UserService) {
   }
 
   function addItemFromShow(item, qty) {
-    console.log(qty);
     var cart = getCart();
     var existingItem = cart.find(i => i._id === item._id);
     if(existingItem) {
@@ -74,6 +74,15 @@ function CartService(UserService) {
       localStorage.setItem(key, JSON.stringify([]));
       return [];
     }
+  }
+
+  function addCarts() {
+    var key = getCartKey();
+    var cart = getCart();
+    var anonCart = JSON.parse(localStorage.getItem("cart:anonymous"));
+    cart.push.apply(cart, anonCart);
+    localStorage.setItem(key, JSON.stringify(cart));
+    localStorage.removeItem("cart:anonymous");
   }
 
   // Helper Functions

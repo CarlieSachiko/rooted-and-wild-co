@@ -6,6 +6,12 @@
 
 a {
   cursor: pointer;
+  color: black;
+}
+
+a:hover {
+  cursor:pointer;
+  color: #777;
 }
 
 [ui-view].ng-enter {
@@ -131,25 +137,79 @@ a.navbar-toggle:hover {
 }
 
 /*HOME STATE*/
-/*#index-img {
-  width: 100%;
-  margin-top: -30px;
-  margin-bottom: 10px;
-}*/
-
-div#index {
+.slider {
   margin-top: -30px;
   margin-bottom: 10px;
   height: 75vh;
-  background-image: url("../images/IMG_0007.jpg");
+}
+
+.slide1,.slide2,.slide3,.slide4,.slide5 {
+  position: absolute;
+  width: 100%;
+  height: 75vh;
+}
+
+.slide1 {
+  background: url(../images/IMG_0057.jpg)no-repeat center;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-}​
+  animation:fade 16s infinite;
+  -webkit-animation:fade 16s infinite;
+}
+
+.slide2 {
+  background: url(../images/IMG_0007.jpg)no-repeat center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  animation:fade2 16s infinite;
+  -webkit-animation:fade2 16s infinite;
+}
+
+.slide3 {
+  background: url(../images/IMG_8784.jpg)no-repeat center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  animation:fade3 16s infinite;
+  -webkit-animation:fade3 16s infinite;
+}
+
+/*.slide4 {
+  background: url(../images/IMG_8784.jpg)no-repeat center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  animation:fade4 16s infinite;
+  -webkit-animation:fade4 16s infinite;
+}*/
+
+@keyframes fade
+{
+  0%   {opacity:1}
+  33.333% { opacity: 0}
+  66.666% { opacity: 0}
+  100% { opacity: 1}
+}
+@keyframes fade2
+{
+  0%   {opacity:0}
+  33.333% { opacity: 1}
+  66.666% { opacity: 0 }
+  100% { opacity: 0}
+}
+@keyframes fade3
+{
+  0%   {opacity:0}
+  33.333% { opacity: 0}
+  66.666% { opacity: 1}
+  100% { opacity: 0}
+}
 
 /*ABOUT STATE*/
 img#about-img {
-  max-height: 200px !important;
+  max-height: 400px !important;
 }
 
 div#about {
@@ -249,6 +309,23 @@ div#slider figure {
   /*margin-top: -30px;*/
 }
 
+/*SHOW-BLOG STATE*/
+.show-blog {
+  width: 90% !important;
+}
+
+.comment-name {
+  font-size: 18px;
+}
+
+.comment-content {
+  font-size: 15px;
+}
+
+.blog-img {
+  width: 100%;
+  margin:auto;
+}
 
 /*SHOP NAV*/
 .shop-navbar {
@@ -263,10 +340,69 @@ div#slider figure {
 
 .shop-nav, .shop-inner-nav {
   display: block !important;
+  margin-top: -30px !important;
+}
+
+@media screen and (max-width:768px) {
+  .shop-nav, .shop-inner-nav {
+    display: block !important;
+    margin-top: -10px !important;
+  }
 }
 
 .shop-inner-nav {
   background-color: transparent !important;
+}
+
+/*SHOP HOME STATE*/
+/*.bouquets {
+  margin: auto;
+}*/
+
+.filters {
+  margin-bottom: -20px;
+}
+
+#bouquet-img {
+  max-height: 300px;
+}
+
+.shop-home {
+  margin-top: -30px;
+}
+
+.bouq-thumbnail {
+  border: none;
+}
+
+/*BOUQUET SHOW STATE*/
+.show-bouquet {
+  height: 73vh;
+}
+
+/*CART STATE*/
+.cart {
+  height: 73vh;
+}
+
+#cart-total {
+  border-left: 1px solid black;
+
+}
+
+/*CHECKOUT STATE*/
+.checkout-info {
+  /*width: 80vh;*/
+}
+
+/*CONFIRM STATE*/
+.confirm {
+  height: 73vh;
+}
+
+/*ORDER-HISTORY STATE*/
+.order-history {
+  height: 73vh;
 }
 
 /*LOGIN STATE*/
