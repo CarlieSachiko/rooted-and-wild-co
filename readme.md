@@ -14,7 +14,7 @@ The shop element of the site is not something Mackenzie will actually be using. 
 
 --------
 ###Technologies Used
-For this website I used:
+
 * HTML5
 * CSS3
 * Bootstrap
