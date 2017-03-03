@@ -34,6 +34,11 @@ Follow the link below to check it out!
 [Rooted & Wild Co.](https://rooted-and-wild.herokuapp.com/#!/home/index)
 
 --------
+###Major Hurdles
+* Understanding the MEAN Stack
+* 
+
+--------
 ###Unsolved Problems
 * Duplicate items added to cart when anonymous user signs in to their account and has added the same item to their cart before signing in
 * Responsive logo in the navbar 
@@ -47,19 +52,16 @@ Here is a list of things I would like to do moving forward:
 * Fill out the text with Mackenzie's words
 * Implement a scheduling system, so potential clients can work with Mackenzie to find the best dates for their events
 * Launch using gulp
-* Add liking system to blogs
 * Make the site more responsive
     * Images on work page to become a scroll down instead of slideshow
     * Logo in navbar disappear and new one placed below it
 * Blog pagination
 * Put restrictions on the password length and characters used
 * Add her instagram feed
-* Add arrows to the price sorting
+* Add arrows to the price filtering
 * Add a quck view option to main shop page
 * Enlarge images on click in blogs
-* Put blogs in descending order
 * Prevent users from liking posts multiple times
-* Put arrows on the price filter
 * More consistent IIFEs
 * Add favicon
 
