@@ -1,25 +1,20 @@
 <div id="blog" class="container">
-  <div class="row">
-    <div class="col-sm-8">
-      <div ng-repeat="post in blogCtrl.posts | orderBy: 'post.createdAt':true">
-        <a ui-sref="home.show-blog({postId: post._id})"><h3>{{post.title}}</h3></a>
-        <p>{{post.createdAt | date:'longDate'}}</p>
-        <hr>
-        <p ng-repeat="paragraph in post.paragraphs">{{paragraph}}</p>
-        <p>xo. Mackenzie</p>
+  <div ng-repeat="post in blogCtrl.posts | orderBy: 'post.createdAt':true">
+    <a ui-sref="home.show-blog({postId: post._id})"><h3>{{post.title}}</h3></a>
+    <p>{{post.createdAt | date:'longDate'}}</p>
+    <hr>
+    <p ng-repeat="paragraph in post.paragraphs">{{paragraph}}</p>
+    <p>xo. Mackenzie</p>
 
-        <img ng-repeat="img in post.images" ng-src="{{img}}" alt="{{post.title}}" class="blog-img">
-        <br>
-        <br>
+    <img ng-repeat="img in post.images" ng-src="{{img}}" alt="{{post.title}}" class="blog-img">
+    <br>
+    <br>
 
-        <div>
-          <span ng-click="blogCtrl.addLike(post)" class="glyphicon glyphicon-heart" aria-hidden="true"></span> {{post.likes}} Likes |
-          <a ui-sref="home.show-blog({postId: post._id})"><span ng-click="blogCtrl.addLike(post)" class="glyphicon glyphicon-comment" aria-hidden="true"></span> ({{post.comments.length}}) Comments </a>
-        </div>
-        <hr>
-        <br>
-      </div>
+    <div>
+      <span ng-click="blogCtrl.addLike(post)" class="glyphicon glyphicon-heart" aria-hidden="true"></span> {{post.likes}} Likes |
+      <a ui-sref="home.show-blog({postId: post._id})"><span ng-click="blogCtrl.addLike(post)" class="glyphicon glyphicon-comment" aria-hidden="true"></span> ({{post.comments.length}}) Comments </a>
     </div>
-
+    <hr>
+    <br>
   </div>
 </div>
