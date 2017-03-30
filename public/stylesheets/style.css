@@ -107,7 +107,7 @@ div#logo-div {
   display: none;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
   .navbar-toggle {
     display: inline-block;
     padding: 10px !important;
@@ -232,7 +232,13 @@ div.row.about {
 
 /*CONTACT STATE*/
 #contact {
-  height: 73vh;
+  margin-bottom: 3vh;
+}
+
+@media screen and (max-width:1024px) {
+  #contact {
+    margin-bottom: 42vh;
+  }
 }
 
 div.contact-text {
@@ -250,6 +256,7 @@ div#contact-form {
 #work {
   margin-bottom: 20px;
   margin-top: -20px;
+  overflow-x: hidden;
 }
 
 @media screen and (max-width:768px) {
@@ -341,7 +348,7 @@ div#slider figure {
   margin-top: -20px !important;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
   .shop-nav, .shop-inner-nav {
     display: block !important;
     margin-top: -10px !important;

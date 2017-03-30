@@ -7,14 +7,14 @@
 
   <div class="row container">
 
-    <div class="row col-xs-8 container">
+    <div class="row col-sm-8 container">
       <div ng-repeat="item in cartCtrl.cart track by $index">
         <div class="row">
-          <div class="col-xs-3">
+          <div class="col-sm-3">
             <a ui-sref="shop.show-bouquet({bouqId: item._id})"><img ng-src="{{item.image}}" height="200" alt="Bouquet: {{item.name}}"></a>
           </div>
 
-          <div class="col-xs-5">
+          <div class="col-sm-5">
             <h4>{{item.name}} </h4>
             <p>{{item.price*item.qty | currency:'$'}}</p>
             <p>
@@ -28,7 +28,7 @@
       </div>
     </div>
 
-    <div ng-show="cartCtrl.cart.length" id="cart-total" class="col-xs-4">
+    <div ng-show="cartCtrl.cart.length" id="cart-total" class="col-sm-4">
       <h4>Total: {{cartCtrl.getTotal() | currency:'$'}}</h4>
       <a ng-show="cartCtrl.isLoggedIn()" ui-sref="shop.checkout" type="button"><h4>Checkout</h4></a>
       <p ng-hide="cartCtrl.isLoggedIn()">Please <a ui-sref="shop.login">login</a> or <a ui-sref="shop.signup">create an account</a> to checkout</p>
