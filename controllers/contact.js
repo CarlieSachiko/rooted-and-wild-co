@@ -18,7 +18,7 @@ function sendMail(req, res, next) {
     email: req.body.email,
     to: "carliesachiko@gmail.com",
     subject: req.body.subject, // Subject line
-    text: "From: " + req.body.name + "\n\nEmail: " + req.body.email + "\n\nMessage: " + req.body.text //, // plaintext body
+    text: "From: " + req.body.name + "\nEmail: " + req.body.email + "\nSubject: " + req.body.subject + "\n\nMessage: " + req.body.text //, // plaintext body
   };
   transporter.sendMail(mailOptions, function(err, info) {
     if(err) {
