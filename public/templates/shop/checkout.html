@@ -7,11 +7,11 @@
     <div class="row col-sm-8 container">
       <div ng-repeat="item in checkoutCtrl.cart">
         <div class="row">
-          <div class="col-sm-3">
+          <div class="col-sm-6">
             <a ui-sref="shop.show-bouquet({bouqId: item._id})"><img ng-src="{{item.image}}" height="200" alt="Bouquet: {{item.name}}"></a>
           </div>
 
-          <div class="col-sm-5">
+          <div class="col-sm-2">
             <h4>{{item.name}} </h4>
             <p>{{item.price*item.qty | currency:'$'}}</p>
             <p>Quantity: {{item.qty}}</p>

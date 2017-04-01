@@ -15,7 +15,7 @@ router.get('/users/me', userCtrl.me);
 
 router.get('/bouquets', bouquetCtrl.getAllBouquets);
 router.get('/bouquets/:id', bouquetCtrl.getBouquet);
-router.post('/bouquets', bouquetCtrl.addBouquet);
+// router.post('/bouquets', bouquetCtrl.addBouquet);
 
 router.get('/orders', orderCtrl.getAllOrders);
 router.post('/orders', orderCtrl.submitOrder);
@@ -23,7 +23,7 @@ router.get('/orders/:id', orderCtrl.getOrder);
 
 router.get('/blog-posts', blogCtrl.getAllPosts);
 router.get('/blog-posts/:id', blogCtrl.getPost);
-router.post('/blog-posts', blogCtrl.addPost);
+// router.post('/blog-posts', blogCtrl.addPost);
 router.put('/blog-posts/:id', blogCtrl.updatePost);
 
 router.post('/blog-posts/:id/comments', commentCtrl.addComment);
