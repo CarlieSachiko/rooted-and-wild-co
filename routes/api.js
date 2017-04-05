@@ -15,7 +15,7 @@ router.get('/users/me', userCtrl.me);
 
 router.get('/bouquets', bouquetCtrl.getAllBouquets);
 router.get('/bouquets/:id', bouquetCtrl.getBouquet);
-// router.post('/bouquets', bouquetCtrl.addBouquet);
+router.post('/bouquets', bouquetCtrl.addBouquet);
 
 router.get('/orders', orderCtrl.getAllOrders);
 router.post('/orders', orderCtrl.submitOrder);
