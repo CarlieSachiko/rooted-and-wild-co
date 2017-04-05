@@ -1,6 +1,7 @@
 <div id="blog" class="container">
-  <div ng-repeat="post in blogCtrl.posts | orderBy: 'post.createdAt':true">
-    <a ui-sref="home.show-blog({postId: post._id})"><h3>{{post.title}}</h3></a>
+  <!-- <div ng-repeat="post in blogCtrl.posts | orderBy: 'post.createdAt':true"> -->
+  <div dir-paginate="post in blogCtrl.posts | orderBy: 'post.createdAt':true | itemsPerPage: 2 track by $index">
+    <a ui-sref="home.show-blog({postTitle: post.url_title, postId: post._id})"><h3>{{post.title}}</h3></a>
     <p>{{post.createdAt | date:'longDate'}}</p>
     <hr>
     <p ng-repeat="paragraph in post.paragraphs">{{paragraph}}</p>
@@ -17,4 +18,31 @@
     <hr>
     <br>
   </div>
+  <a href="javascript:" id="return-to-top"><p>Back to top</p></a>
+  <dir-pagination-controls></dir-pagination-controls>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    // var userFeed = new Instafeed({
+    //     get: 'user',
+    //     userId: '9027393',
+    //     accessToken: '9027393.a4dc5b5.6c58357074074dc2a7c8a0c2c04cfc70',
+    //     template: '<a href="{{link}}"><img src="{{image}}" /></a>',
+    //     limit: 8,
+    // });
+    // userFeed.run();
+
+    $('#return-to-top').click(function() {
+      $('body,html').animate({
+          scrollTop : 0
+      }, 500);
+    });
+
+    $('dir-pagination-controls ul#pagnation li#ng-scope a').click(function() {
+      $('body,html').animate({
+          scrollTop : 0
+      }, 500);
+    });
+  });
+</script>

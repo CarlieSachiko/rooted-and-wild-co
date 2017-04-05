@@ -22,7 +22,7 @@ router.post('/orders', orderCtrl.submitOrder);
 router.get('/orders/:id', orderCtrl.getOrder);
 
 router.get('/blog-posts', blogCtrl.getAllPosts);
-router.get('/blog-posts/:id', blogCtrl.getPost);
+router.get('/blog-posts/:id', blogCtrl.showPost);
 // router.post('/blog-posts', blogCtrl.addPost);
 router.put('/blog-posts/:id', blogCtrl.updatePost);
 

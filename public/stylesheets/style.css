@@ -282,9 +282,19 @@ div#slider figure {
   margin-bottom: 10px;
 }
 
+.pagination>.active>a {
+  color: white !important;
+  background-color: black !important;
+  border-color: black !important;
+}
+
+.pagination>li>a {
+  color: black !important;
+}
+
 /*SHOW-BLOG STATE*/
 .show-blog {
-  width: 90% !important;
+  width: 60% !important;
 }
 
 .comment-name {
@@ -297,7 +307,15 @@ div#slider figure {
 
 .blog-img {
   width: 100%;
-  margin:auto;
+  margin: auto;
+}
+
+.clearfix {
+  clear:both;
+}
+
+.blog-toggles {
+  font-size: 18px;
 }
 
 /*SHOP NAV*/

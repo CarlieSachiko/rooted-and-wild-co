@@ -4,6 +4,7 @@ module.exports = {
   addPost,
   getAllPosts,
   getPost,
+  showPost,
   updatePost
 };
 
@@ -22,6 +23,25 @@ function getAllPosts(req, res, next) {
 function getPost(req, res, next) {
   Post.findById(req.params.id).populate('comments').exec(function(err, post) {
     res.json(post);
+  }).catch(err => res.status(400).json(err));
+}
+
+function showPost(req, res, next) {
+  // declare a variable to hold the "show" post and the ids of the "next" post and the "prev" post
+  var results = {};
+  // fetch the "show" post
+  Post.findById(req.params.id).populate('comments').exec()
+  .then(showPost => {
+    results.showPost = showPost;
+    // find the "next" post after the "show" doc
+    return Post.findOne({_id: {$gt: req.params.id}}).sort({_id: 1}).exec();
+  }).then(nextPost => {
+    results.nextPost = nextPost;
+    // find the "prev" post
+    return Post.findOne({_id: {$lt: req.params.id}}).sort({_id: -1}).exec();
+  }).then(prevPost => {
+    results.prevPost = prevPost;
+    res.json(results);
   }).catch(err => res.status(400).json(err));
 }
 

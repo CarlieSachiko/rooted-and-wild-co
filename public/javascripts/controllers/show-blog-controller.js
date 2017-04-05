@@ -7,8 +7,10 @@ function ShowBlogController($http, $stateParams, BlogService, CommentService) {
   var vm = this;
 
   if ($stateParams.postId) {
-    BlogService.get({id: $stateParams.postId}, function(post) {
-      vm.post = post;
+    BlogService.get({id: $stateParams.postId}, function(results) {
+      vm.post = results.showPost;
+      vm.nextPost = results.nextPost
+      vm.prevPost = results.prevPost;
     });
   }
 
