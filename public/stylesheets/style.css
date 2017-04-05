@@ -361,13 +361,6 @@ div#slider figure {
   border-radius: 0 !important;
 }
 
-/*CONFIRM STATE*/
-.confirm {
-/*  height: 73vh;*/
-}
-
-/*ORDER-HISTORY STATE*/
-
 /*LOGIN STATE*/
 div#login {
   width: 80vh;
