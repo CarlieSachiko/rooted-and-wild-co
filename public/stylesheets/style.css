@@ -280,6 +280,7 @@ div#slider figure {
 /*BLOG STATE*/
 #blog {
   margin-bottom: 10px;
+  width: 60%;
 }
 
 .pagination>.active>a {
