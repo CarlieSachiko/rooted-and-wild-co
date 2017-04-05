@@ -93,6 +93,7 @@ div.web-credit {
 .navbar-default {
   background-color: white;
   z-index: 9;
+  margin-top: 9px;
 }
 
 .navbar .navbar-nav {
